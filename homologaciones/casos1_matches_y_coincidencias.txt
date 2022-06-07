@@ -1,0 +1,41 @@
+caso: 3 coincidencias y 1 match
+-imbruvica 140 mg  120 capsulas (ibrutinib) | 140	mg	120	tabletas | dice tabletas en vez de capsulas
+
+
+caso: 0 coincidencias y 0 matches
+-alunbrig (brigatinib) f.f. tableta | dice tableta en singular  en MedicamentosBDD es plural
+
+-kisqali tabletas (ribociclib) | en MedicamentosBDD viene solo 200 mg 63 comprimidos
+
+
+---------------------coercion por expresion regular-------------------------
+giotrif 30mg (afatinib) 30 tabletas (medicamento de uso humano)
+giotrif 40mg (afatinib) 30 tabletas (medicamento de uso humano)
+verzenio (abemaciclib) 100mg 56 tab
+lorviqua (lorlatinib)caja con 30 tabletas
+bay 2757556 larotrectinib 20 g/ml frasco 100 ml
+cont 1 blass bottle cont 100ml  27bay57556 (larotrectinib) labeled
+medicamento trazimera (trastuzumab) caja de carton con un frasco ampula con 440 mg de polvo liofilizado y un frasco ampula con 20 ml de diluyente e instructivo anexo
+avastin  100 mg/4 ml solucion inyectable (bevacizumab)
+nivolumab (bms-936558-) vial de 10 ml (100mg/vial) 
+prolia (denosumab) jeringa con 60 mg/ 1.0 ml (medicamento de uso humano)
+xgeva (denosumab) ampula con 120 mg/ 1.7 ml (medicamento de uso humano)
+nivolumab,  vial de 10 ml (100mg/vial)
+kadcyla 100mg frasco ampula (trastuzumab emtansina)
+mvasi (bevacizumab) Ã£Âmpula con 100 mg/ 4.0 ml (medicamento de uso humano)
+avastin  400 mg/16ml solucion inyectable  (bevacizumab)
+medicamentos (adcetris 50mg (brentuximab vedotin 50mg) caja con 1 vial)
+medicamentos (opdivo 40mg/4ml[nivolumab] caja con frasco).
+tecentriq 1200 mg/20 ml solucion inyectable (atezolizumab)
+medicamentos (opdivo 40mg/4ml[nivolumab] caja con frasco).
+perjeta 30 mg/ml  frasco ampula 14 ml  (pertuzumab)
+medicamentos (keytruda[pembrolizumab 100mg/4ml]en caja con frasco con solucion inyectable para infusion intravenosa).
+
+
+jeringa
+vial
+caja con frasco
+caja, 
+frasco, 
+ampula, 
+frasco ampula

@@ -1,0 +1,3338 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritrade Business</title>
+    <link href="/Content/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="description">
+
+    <link href="/Content/admin?v=AY3TNcnnk0VN7c3IAbkagyuDYlZMreEly_BdXV4KkVA1" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+    
+    <link href="/Content/themes/base/tabs.css" rel="stylesheet" />
+    <link href="/Content/Components/ui-autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="/Scripts/Plugins/BootstrapDatepicker/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="/Scripts/Plugins/BootstrapColorSelector/css/bootstrap-colorselector.css" rel="stylesheet" type="text/css" />
+    <style>
+        .boton-informa {
+            background-color: #2024e5;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        div#gridInfoTabla table thead th {
+            height: 55px;
+        }
+
+        tbody#tbodyTabInfoTabla td {
+            height: 25px;
+        }
+
+        #messageAduana {
+            display: inline-block;
+            top: 10px;
+            position: relative;
+        }
+
+        div#messageAduanaBO {
+            margin-left: 10px;
+        }
+
+        .no-display {
+            display: none !important;
+        }
+
+        #cboPais {
+            /*max-width: 170px !important;*/
+        }
+
+        mark {
+            background-color: yellow;
+        }
+
+        #gridAduanaDUA thead th:first-child {
+            width: 40%;
+        }
+
+        #message a {
+            font-size: 29px;
+        }
+
+        #ModalVentanaMensaje .texto-ventana-mensaje #lnkContactenos a {
+            cursor: pointer;
+        }
+
+        #messageFree a {
+            font-size: 29px;
+        }
+
+
+        #ModalVentanaMensajeFree .modal-header button.close {
+            opacity: 1 !important;
+            margin-top: 1px !important;
+            margin-right: 1px !important;
+        }
+
+        #ModalVentanaMensajeFree .title-ventana-mensaje {
+            font-family: ProximaNova-Bold;
+            font-size: 14.5px;
+            color: #212934;
+            margin-bottom: 20px;
+        }
+
+        #ModalVentanaMensajeFree .texto-ventana-mensaje {
+            font-family: ProximaNova-Light;
+            font-size: 11px;
+            line-height: 15px;
+            color: #212935;
+            margin-bottom: 25px;
+        }
+
+            #ModalVentanaMensajeFree .texto-ventana-mensaje #lnkContactenosFree a {
+                text-decoration: underline;
+                color: blue;
+                cursor: pointer;
+            }
+
+        #messageDescarga a {
+            font-size: 29px;
+        }
+
+
+        #ModalVentanaDescarga .modal-header button.close {
+            opacity: 1 !important;
+            margin-top: 1px !important;
+            margin-right: 1px !important;
+        }
+
+        #ModalVentanaDescarga .title-ventana-mensaje {
+            font-family: ProximaNova-Bold;
+            font-size: 14.5px;
+            color: #212934;
+            margin-bottom: 20px;
+        }
+
+        #ModalVentanaDescarga .texto-ventana-mensaje {
+            font-family: ProximaNova-Light;
+            font-size: 11px;
+            line-height: 15px;
+            color: #212935;
+            margin-bottom: 25px;
+        }
+
+            #ModalVentanaDescarga .texto-ventana-mensaje #lnkContactenosDescarga a {
+                text-decoration: underline;
+                color: blue;
+                cursor: pointer;
+            }
+
+        #modal-favoritos-body a {
+            cursor: pointer;
+        }
+
+        .InfoComplement {
+            display: inline;
+            width: 100%;
+            /*height: 11px;*/
+            background-color: #f5c223;
+            color: #fff;
+            /*float: right;*/
+            cursor: pointer;
+        }
+
+        #ModalVerRegistro th {
+            height: 48px;
+        }
+
+        #ModalVerRegistro td {
+            height: 27px;
+        }
+
+        #tablaVerRegistros {
+            margin-bottom: 15px;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+            .dropdown-submenu > .dropdown-menu {
+                display: none;
+                color: red
+            }
+
+            .dropdown-submenu > .dropdown-menu {
+                top: 0;
+                right: 100%;
+                margin-top: -6px;
+                margin-left: -1px;
+                -webkit-border-radius: 0 6px 6px 6px;
+                -moz-border-radius: 0 6px 6px 6px;
+                border-radius: 0 6px 6px 6px;
+            }
+
+            .dropdown-submenu:hover > .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-submenu > a:after {
+                display: block;
+                content: " ";
+                float: right;
+                width: 0;
+                height: 0;
+                border-color: transparent;
+                border-style: solid;
+                border-width: 5px 0 5px 5px;
+                border-left-color: #cccccc;
+                margin-top: 5px;
+                margin-right: -10px;
+            }
+
+            .dropdown-submenu:hover > a:after {
+                border-left-color: #ffffff;
+            }
+
+            .dropdown-submenu.pull-left {
+                float: none;
+            }
+
+                .dropdown-submenu.pull-left > .dropdown-menu {
+                    left: -100%;
+                    margin-left: 10px;
+                    -webkit-border-radius: 6px 0 6px 6px;
+                    -moz-border-radius: 6px 0 6px 6px;
+                    border-radius: 6px 0 6px 6px;
+                }
+    </style>
+
+	
+	
+
+	<!-- Facebook Pixel Code -->
+	<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function()
+	{n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '2414261925547103');fbq('track', 'PageView');
+	</script><noscript><img height="1" width="1"src="https://www.facebook.com/tr?id=2414261925547103&ev=PageView&noscript=1"/></noscript>
+	<!-- End Facebook Pixel Code -->
+	
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-inverse navbar-admin">
+    <div class="container container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/es/mis-busquedas">
+                <img alt="Brand" src="/Content/Images/logo_cabecera.jpg">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><label><span>Bienvenido (a) </span>&nbsp; Philipp Wostmann - LABORATORIOS VANQUISH, SA DE CV &nbsp;   </label></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+
+                <li><button type="button" id="idioma" class="btn btn-language">ENGLISH +</button></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);"> <span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu">
+                                        <li><a href="/es/mis-alertas-favoritos" data-field="Mis Alertas">Mis Alertas</a></li>
+                                            <li><a id="toggleAlert" href="#" data-field="Deshabilitar Alertas">Deshabilitar Alertas</a></li>
+                                                                    <li><a href="/es/mis-favoritos" data-field="Mis Favoritos">Mis Favoritos</a></li>
+                    <li><a href="/es/mis-grupos" data-field="Mis Grupos">Mis Grupos</a></li>
+                    <li>
+                         
+                        <a data-field="Mis Plantillas" href="/es/mis-plantillas">Mis Plantillas</a>
+                    </li>
+                                            <li>
+                        <a href="/es/mis-busquedas?op=ft" onclick="return confirm
+                                ('Desea ingresar al Modo Prueba Gratis?')" data-field="Mi Prueba Gratuita">Mi Prueba Gratuita</a>
+                            </li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/login/logout" data-field="Cerrar Sesión">Cerrar Sesi&#243;n</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    <div class="hidden">
+<form action="/es/MisBusquedas/SetCulture" id="form-language" method="post">            <select name="culture" class="bot_cabecera_01">
+                <option value="en-us"         selected="selected"
+>English</option>
+                <option value="es" >Español</option>
+            </select>
+</form>    </div>
+</nav>
+
+        <div class="navbar-menu">
+            <div class="container">
+                <ul class="pills">
+                    <li class="child-pill active">
+                        <a href="/es/mis-busquedas">
+                            Mis B&#250;squedas
+                        </a>
+                    </li>
+                        <li class="child-pill ">
+                            <a href="/es/mis-productos">
+                                Mis Productos
+                            </a>
+                        </li>
+                        <li class="child-pill ">
+                            <a href="/es/mis-compa%C3%B1ias">
+                                Mis Compa&#241;&#237;as
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+
+
+    <div class="container">
+        
+
+
+
+
+
+<div id="loadingPageAdmin" class="loader is-active-loading">
+    <div class="objectLoading"></div>
+</div>
+
+<div class="content-form-mis-busquedas">
+
+    <div class="form-horizontal formFiltersMisBusquedas">
+        <div class="form-group">
+            <label class="col-sm-2 col-xs-12 control-label filter-control-label-withoutColor-vt">
+                Usted desea ver las
+            </label>
+            <div class="col-sm-6 col-xs-12">
+                <label class="radio-inline control-label-withoutColor-vt">
+
+                    <input checked="checked" id="rdbImp" name="rdbTipoOpe" type="radio" value="I" /> Importaciones
+                </label>
+                <label class="radio-inline control-label-withoutColor-vt">
+
+                    <input id="rdbExp" name="rdbTipoOpe" type="radio" value="E" /> Exportaciones
+                </label>
+
+                <label class="control-label control-label-withoutColor-vt">
+                    &nbsp; de &nbsp;
+                </label>
+
+
+                <select class="form-control filter-selectField-vt select-max-sm" id="cboPais2" name="cboPais2"><option selected="selected" value="1LAT">Latinoam&#233;rica</option>
+<option value="7NOR">NorteAm&#233;rica</option>
+<option value="8ASI">Asia</option>
+<option value="4UE">Uni&#243;n Europea</option>
+</select>
+
+                <select class="form-control filter-selectField-vt select-max-sm" id="cboPais" name="cboPais"><option selected="selected" value="AR">Argentina</option>
+<option value="BO">Bolivia</option>
+<option value="BR">Brasil</option>
+<option value="BRD">Brasil Detalle Full (Solo Importaciones)</option>
+<option value="BR_">Brasil Manifiestos</option>
+<option value="CL">Chile</option>
+<option value="CO">Colombia</option>
+<option value="CR">Costa Rica Detallado</option>
+<option value="CRS">Costa Rica Estad&#237;stico</option>
+<option value="EC">Ecuador</option>
+<option value="EC_">Ecuador Manifiestos</option>
+<option value="SV">El Salvador</option>
+<option value="GT">Guatemala</option>
+<option value="HN">Honduras</option>
+<option value="MXD">M&#233;xico Detalle Full v&#237;as</option>
+<option value="MXM">Mexico Detalle Maritimo</option>
+<option value="PA">Panam&#225;</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Per&#250;</option>
+<option value="PE_">Per&#250; Manifiestos</option>
+<option value="RD">Rep&#250;blica Dominicana</option>
+<option value="UY">Uruguay</option>
+<option value="VE">Venezuela</option>
+</select>
+            </div>
+
+            <div class="col-sm-4 col-xs-12">
+                <button class="btn btn-video-vt blink-button" onclick="ModalAdmin.registerShowByShowOption('ModalVentanaVideo', true);">
+                    Video Tutorial
+                </button>
+            </div>
+        </div>
+
+        <di id="camposFiltros">
+            
+
+    <div class="form-group">
+        <label class="col-sm-2 col-xs-12 control-label filter-control-label-vt">
+            Pa&#237;s Origen
+            
+
+        </label>
+        <div class="col-sm-6 col-xs-12">
+            <select class="form-control filter-selectField-vt" id="cboPaisB" name="cboPaisB"><option value="0">[TODOS LOS PAISES]</option>
+<option value="301">AFGANIST&#193;N</option>
+<option value="401">ALBANIA</option>
+<option value="438">ALEMANIA</option>
+<option value="404">ANDORRA</option>
+<option value="149">ANGOLA</option>
+<option value="237">ANTIGUA Y BARBUDA</option>
+<option value="302">ARABIA SAUDITA</option>
+<option value="250">ARCHIPI&#201;LAGO DE TIERRA DEL FUEGO</option>
+<option value="254">&#193;REA FRANCA LAS,ANTIGUAS</option>
+<option value="102">ARGELIA</option>
+<option value="349">ARMENIA</option>
+<option value="93">ARUBA</option>
+<option value="501">AUSTRALIA</option>
+<option value="405">AUSTRIA</option>
+<option value="350">AZERBAIY&#193;N</option>
+<option value="239">BAHAMAS</option>
+<option value="303">BAHR&#201;IN</option>
+<option value="345">BANGLADESH</option>
+<option value="201">BARBADOS</option>
+<option value="406">B&#201;LGICA</option>
+<option value="236">BELICE</option>
+<option value="112">BEN&#205;N</option>
+<option value="439">BIELORRUSIA</option>
+<option value="202">BOLIVIA</option>
+<option value="94">BONAIRE, SAN EUSTAQUIO Y SABA</option>
+<option value="446">BOSNIA Y HERZEGOVINA</option>
+<option value="103">BOTSWANA</option>
+<option value="203">BRASIL</option>
+<option value="346">BRUN&#201;I DARUSSALAM</option>
+<option value="407">BULGARIA</option>
+<option value="101">BURKINA FASO</option>
+<option value="104">BURUNDI</option>
+<option value="305">BUT&#193;N</option>
+<option value="150">CABO VERDE</option>
+<option value="306">CAMBOYA</option>
+<option value="105">CAMER&#218;N</option>
+<option value="204">CANAD&#193;</option>
+<option value="111">CHAD</option>
+<option value="408">CHECOSLOVAQUIA</option>
+<option value="208">CHILE</option>
+<option value="310">CHINA</option>
+<option value="435">CHIPRE</option>
+<option value="205">COLOMBIA</option>
+<option value="108">CONGO</option>
+<option value="308">COREA DEL NORTE</option>
+<option value="309">COREA DEL SUR</option>
+<option value="110">COSTA DE MARFIL</option>
+<option value="206">COSTA RICA</option>
+<option value="447">CROACIA</option>
+<option value="207">CUBA</option>
+<option value="95">CURAZAO</option>
+<option value="409">DINAMARCA</option>
+<option value="153">DJIBOUTI</option>
+<option value="233">DOM&#205;NICA</option>
+<option value="210">ECUADOR</option>
+<option value="113">EGIPTO</option>
+<option value="211">EL SALVADOR</option>
+<option value="331">EMIRATOS &#193;RABES UNIDOS</option>
+<option value="160">ERITREA</option>
+<option value="448">ESLOVAQUIA</option>
+<option value="449">ESLOVENIA</option>
+<option value="410">ESPA&#209;A</option>
+<option value="212">ESTADOS UNIDOS</option>
+<option value="440">ESTONIA</option>
+<option value="161">ETIOP&#205;A</option>
+<option value="444">FEDERACI&#211;N RUSA</option>
+<option value="512">FIJI</option>
+<option value="312">FILIPINAS</option>
+<option value="411">FINLANDIA</option>
+<option value="412">FRANCIA</option>
+<option value="314">FRANJA DE GAZA</option>
+<option value="115">GAB&#211;N</option>
+<option value="116">GAMBIA</option>
+<option value="351">GEORGIA</option>
+<option value="117">GHANA</option>
+<option value="240">GRANADA</option>
+<option value="413">GRECIA</option>
+<option value="213">GUATEMALA</option>
+<option value="118">GUINEA</option>
+<option value="119">GUINEA ECUATORIAL</option>
+<option value="156">GUINEA-BISSAU</option>
+<option value="214">GUYANA</option>
+<option value="215">HAIT&#205;</option>
+<option value="216">HONDURAS</option>
+<option value="341">HONG KONG</option>
+<option value="414">HUNGR&#205;A</option>
+<option value="298">INDETERMINADO (AM&#201;RICA)</option>
+<option value="398">INDETERMINADO (ASIA)</option>
+<option value="999">INDETERMINADO (CONTINENTE)</option>
+<option value="498">INDETERMINADO (EUROPA)</option>
+<option value="315">INDIA</option>
+<option value="316">INDONESIA</option>
+<option value="317">IRAK</option>
+<option value="318">IR&#193;N (REP&#218;BLICA ISL&#193;MICA DE)</option>
+<option value="415">IRLANDA</option>
+<option value="416">ISLANDIA</option>
+<option value="146">ISLAS CANARIAS</option>
+<option value="155">ISLAS COMORAS</option>
+<option value="1075">ISLAS MALVINAS</option>
+<option value="521">ISLAS MARIANAS DEL NORTE</option>
+<option value="520">ISLAS MARSHALL</option>
+<option value="518">ISLAS SALOM&#211;N</option>
+<option value="319">ISRAEL</option>
+<option value="417">ITALIA</option>
+<option value="217">JAMAICA</option>
+<option value="320">JAP&#211;N</option>
+<option value="321">JORDANIA</option>
+<option value="352">KAZAJST&#193;N</option>
+<option value="120">KENIA</option>
+<option value="353">KIRGUIST&#193;N</option>
+<option value="514">KIRIBATI</option>
+<option value="323">KUWAIT</option>
+<option value="121">LESOTO</option>
+<option value="441">LETONIA</option>
+<option value="325">L&#205;BANO</option>
+<option value="122">LIBERIA</option>
+<option value="123">LIBIA</option>
+<option value="418">LIECHTENSTEIN</option>
+<option value="442">LITUANIA</option>
+<option value="419">LUXEMBURGO</option>
+<option value="344">MACAO</option>
+<option value="450">MACEDONIA, EX REP&#218;BLICA YUGOSLAVA DE</option>
+<option value="124">MADAGASCAR</option>
+<option value="326">MALASIA</option>
+<option value="125">MALAWI</option>
+<option value="327">MALDIVAS</option>
+<option value="126">MALI</option>
+<option value="420">MALTA</option>
+<option value="127">MARRUECOS</option>
+<option value="128">MAURICIO</option>
+<option value="129">MAURITANIA</option>
+<option value="218">M&#201;XICO</option>
+<option value="515">MICRONESIA, ESTADOS FEDERADOS DE</option>
+<option value="443">MOLDAVIA, REP&#218;BLICA DE</option>
+<option value="421">M&#211;NACO</option>
+<option value="329">MONGOLIA</option>
+<option value="96">MONTENEGRO</option>
+<option value="151">MOZAMBIQUE</option>
+<option value="304">MYANMAR</option>
+<option value="158">NAMIBIA</option>
+<option value="503">NAURU</option>
+<option value="330">NEPAL</option>
+<option value="219">NICARAGUA</option>
+<option value="130">N&#205;GER</option>
+<option value="131">NIGERIA</option>
+<option value="422">NORUEGA</option>
+<option value="504">NUEVA ZELANDA</option>
+<option value="328">OM&#193;N</option>
+<option value="423">PA&#205;SES BAJOS</option>
+<option value="0">PA&#205;SES NO DECLARADOS</option>
+<option value="332">PAKIST&#193;N</option>
+<option value="516">PALAU</option>
+<option value="357">PALESTINA, ESTADO DE</option>
+<option value="220">PANAM&#193;</option>
+<option value="513">PAP&#218;A NUEVA GUINEA</option>
+<option value="221">PARAGUAY</option>
+<option value="222">PER&#218;</option>
+<option value="1000">POLINESIA FRANCESA</option>
+<option value="424">POLONIA</option>
+<option value="425">PORTUGAL</option>
+<option value="223">PUERTO RICO</option>
+<option value="322">QATAR</option>
+<option value="426">REINO UNIDO</option>
+<option value="334">REP&#218;BLICA &#193;RABE SIRIA</option>
+<option value="107">REP&#218;BLICA CENTROAFRICANA</option>
+<option value="451">REP&#218;BLICA CHECA</option>
+<option value="109">REP&#218;BLICA DEMOCR&#193;TICA DEL CONGO</option>
+<option value="324">REP&#218;BLICA DEMOCR&#193;TICA POPULAR LAO</option>
+<option value="209">REP&#218;BLICA DOMINICANA</option>
+<option value="1074">R&#205;O GALLEGOS</option>
+<option value="1053">R&#205;OS ARGENTINOS DE NAVEGACI&#211;N INTERNAC.</option>
+<option value="133">RUANDA</option>
+<option value="427">RUMAN&#205;A</option>
+<option value="506">SAMOA</option>
+<option value="238">SAN CRIST&#211;BAL Y NIEVES</option>
+<option value="428">SAN MARINO</option>
+<option value="97">SAN MART&#205;N (PARTE FRANCESA)</option>
+<option value="235">SAN VICENTE Y LAS GRANADINAS</option>
+<option value="234">SANTA LUC&#205;A</option>
+<option value="431">SANTA SEDE (ESTADO DE LA CIUDAD DEL VATICANO)</option>
+<option value="157">SANTO TOM&#201; Y PR&#205;NCIPE</option>
+<option value="134">SENEGAL</option>
+<option value="98">SERBIA</option>
+<option value="152">SEYCHELLES</option>
+<option value="135">SIERRA LEONA</option>
+<option value="333">SINGAPUR</option>
+<option value="136">SOMALIA</option>
+<option value="307">SRI LANKA</option>
+<option value="137">SUAZILANDIA</option>
+<option value="159">SUD&#193;FRICA</option>
+<option value="138">SUD&#193;N</option>
+<option value="429">SUECIA</option>
+<option value="430">SUIZA</option>
+<option value="232">SURINAM</option>
+<option value="335">TAILANDIA</option>
+<option value="313">TAIW&#193;N, PROVINCIA DE CHINA</option>
+<option value="139">TANZANIA, REP&#218;BLICA UNIDA DE</option>
+<option value="354">TAYIKIST&#193;N</option>
+<option value="507">TERRITORIO AUSTRALIANO (OCEAN&#205;A)</option>
+<option value="145">TERRITORIO BRIT&#193;NICO (&#193;FRICA)</option>
+<option value="227">TERRITORIO BRIT&#193;NICO (AM&#201;RICA)</option>
+<option value="433">TERRITORIO BRIT&#193;NICO (EUROPA)</option>
+<option value="508">TERRITORIO BRIT&#193;NICO (OCEAN&#205;A)</option>
+<option value="99">TERRITORIO BRIT&#193;NICO (OCE&#193;NO INDICO)</option>
+<option value="228">TERRITORIO DAN&#201;S (AM&#201;RICA)</option>
+<option value="1040">TERRITORIO ESPA&#209;OL (&#193;FRICA)</option>
+<option value="147">TERRITORIO FRANC&#201;S (&#193;FRICA)</option>
+<option value="229">TERRITORIO FRANC&#201;S (AM&#201;RICA)</option>
+<option value="509">TERRITORIO FRANC&#201;S (OCEAN&#205;A)</option>
+<option value="230">TERRITORIO HOLAND&#201;S (AM&#201;RICA)</option>
+<option value="510">TERRITORIO NEOZELAND&#201;S (OCEAN&#205;A)</option>
+<option value="231">TERRITORIO NORTEAMERICANO (AM&#201;RICA)</option>
+<option value="511">TERRITORIO NORTEAMERICANO (OCEAN&#205;A)</option>
+<option value="140">TOGO</option>
+<option value="519">TONGA</option>
+<option value="224">TRINIDAD Y TOBAGO</option>
+<option value="141">T&#218;NEZ</option>
+<option value="355">TURKMENIST&#193;N</option>
+<option value="436">TURQU&#205;A</option>
+<option value="517">TUVALU</option>
+<option value="445">UCRANIA</option>
+<option value="142">UGANDA</option>
+<option value="225">URUGUAY</option>
+<option value="356">UZBEKIST&#193;N</option>
+<option value="505">VANUATU</option>
+<option value="226">VENEZUELA</option>
+<option value="337">VIETNAM</option>
+<option value="348">YEMEN</option>
+<option value="432">YUGOSLAVIA</option>
+<option value="100">ZAIRE</option>
+<option value="144">ZAMBIA</option>
+<option value="1083">ZF FLORIDA (URUGUAY)</option>
+<option value="132">ZIMBABUE</option>
+<option value="200">ZONA FRANCA ARGENTINA</option>
+<option value="270">ZONA FRANCA COL&#211;N</option>
+<option value="280">ZONA FRANCA COLONIA</option>
+<option value="259">ZONA FRANCA COMODORO RIVADAVIA</option>
+<option value="1056">ZONA FRANCA CONCEP.DEL URUG.</option>
+<option value="256">ZONA FRANCA C&#211;RDOBA</option>
+<option value="522">ZONA FRANCA CORONEL ROSALES</option>
+<option value="281">ZONA FRANCA FLORIDA</option>
+<option value="258">ZONA FRANCA GENERAL PICO</option>
+<option value="260">ZONA FRANCA IQUIQUE</option>
+<option value="252">ZONA FRANCA JUSTO DARACT</option>
+<option value="251">ZONA FRANCA LA PLATA</option>
+<option value="282">ZONA FRANCA LIBERTAD</option>
+<option value="291">ZONA FRANCA MANAOS</option>
+<option value="257">ZONA FRANCA MENDOZA</option>
+<option value="284">ZONA FRANCA NUEVA HELVECIA</option>
+<option value="285">ZONA FRANCA NUEVA PALMIRA</option>
+<option value="263">ZONA FRANCA PASO DE LOS LIBRES</option>
+<option value="264">ZONA FRANCA PUERTO IGUAZ&#218;</option>
+<option value="261">ZONA FRANCA PUNTA ARENAS</option>
+<option value="1055">ZONA FRANCA PUNTA PEREIRA</option>
+<option value="253">ZONA FRANCA RIO GALLEGOS</option>
+<option value="286">ZONA FRANCA RIO NEGRO</option>
+<option value="287">ZONA FRANCA RIVERA</option>
+<option value="262">ZONA FRANCA SALTA</option>
+<option value="1060">ZONA FRANCA SAN JOS&#201;</option>
+<option value="255">ZONA FRANCA TUCUM&#193;N</option>
+<option value="523">ZONA FRANCA VILLA CONSTITUCI&#211;N</option>
+</select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 col-xs-12 control-label filter-control-label-vt">
+            Descripci&#243;n Comercial
+        </label>
+        <div class="col-sm-6 col-xs-12">
+<input class="form-control filter-textField-vt" data-val="true" data-val-required=" " id="txtDesComercialB" name="txtDesComercialB" placeholder="Digite palabras en español como marca, modelo o el nombre del producto" type="text" value="" />
+        </div>
+
+        <div class="col-sm-3 col-xs-12">
+            <button id="btnAgregarDesComercial" class="btn btn-filtro-vt">
+                Agregar a Filtros
+            </button>
+        </div>
+    </div>
+
+<div class="form-group">
+    <label class="col-sm-2 col-xs-12 control-label filter-control-label-vt">
+        Partida Aduanera
+    </label>
+        <div class="col-sm-6 col-xs-12">
+            <input class="form-control filter-textField-vt" id="txtNandinaB" name="txtNandinaB" placeholder="Digite el código de partida o sus 6 primeros dígitos" type="text" value="" />
+        </div>
+
+    <div class="col-sm-3 col-xs-12">
+        <button id="btnMisPartidas" class="btn btn-mi-filtro-vt" data-field="Mis Productos">
+            Mis Productos
+        </button>
+    </div>
+</div>
+
+
+
+<div class="form-group">
+    <label class="col-sm-2 col-xs-12 control-label filter-control-label-vt">
+        Importador
+    </label>
+    
+    <div class="col-sm-6 col-xs-12">
+            <input class="form-control filter-textField-vt" id="txtImportadorB" name="txtImportadorB" placeholder="Digite el nombre de la empresa importadora" type="text" value="" />
+        </div>
+    <div class="col-sm-3 col-xs-12">
+            <button id="bntMisImportadores" class="btn btn-mi-filtro-vt">
+                Mis Importadores
+            </button>
+    </div>
+</div>
+
+
+
+
+
+        </di>
+
+        <!--Sección de filtros agregados-->
+        <div class="form-group no-display" id="filtros">
+            <label class="col-sm-2 col-xs-12 control-label filter-control-label-vt">
+                Filtros
+            </label>
+            <div class="col-sm-6 col-xs-12">
+                <select class="form-control filter-selectField-vt" id="lstFiltros" multiple="multiple" name="lstFiltros"></select>
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                <button id="btnEliminarFiltros" class="btn btn-mi-filtro-vt">
+                    Eliminar seleccionados
+                </button>
+            </div>
+        </div>
+
+        
+        <div class="form-group" id="rangoInfoEnLinea">
+            <label id="RangoFechas" class="col-sm-12 information-online-label">
+                Informaci&#243;n en l&#237;nea desde 01-ENE.-2014 hasta 30-ABR.-2022
+            </label>
+        </div>
+
+        
+
+        <div class="form-group">
+            <div class="col-sm-12">
+
+                <label class="control-label filter-control-labelNoColour-vt filtro-periodo">
+                    De
+                </label>
+
+                <div class="div-filtro-periodo-busqueda">
+                    <div class="input-group date  filtro-periodo" id="cboDesde">
+                        <input name="cboDesde" type="text" class="form-control"  value="">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <label class="labelToRangoFechas filtro-periodo">
+                    a
+                </label>
+
+                <div class="div-filtro-periodo-busqueda">
+                    <div class="input-group date  filtro-periodo" id="cboHasta">
+                        <input name="cboHasta" type="text" class="form-control"  value="">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                    <div class="form-group" id="messageAduana">
+                        <span id="detailsCountry" class="hidden"></span>
+                        <label id="messageCountry" class="col-sm-12 information-online-label">
+                            Nota: <span id="notesCountry"></span><a class="verInfo"> Ver Detalle </a>
+                        </label>
+                    </div>
+
+                
+            </div>
+        </div><!--Buttons--><div class="form-group">
+            <div class="col-sm-12">
+                <button id="btnBuscar" class="btn btn-buscar btnOperaciones-vt">
+                    BUSCAR
+                </button>
+                <button id="btnRestablecer" class="btn btn-reset btnOperaciones-vt no-display">
+                    Restablecer Buscador
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div id="divRegisterFound" class="no-display">
+            <label id="totalRecordsFound">
+            </label>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div id="divLnkArchivo" class="no-display">
+            <a href="#" id="lnkArchivo" class="lnkDownloadFile"></a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="content_tabs" class="col-sm-12">
+    </div>
+</div>
+
+<!--Inicio Modal Ventana Sesión-->
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalVentanaSesion">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center title-ventana-session">
+                            Sesi&#243;n Expirada
+                        </div>
+                        <div class="text-center texto-ventana-session">
+                            <p>
+                                La sesi&#243;n ha expirado
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" data-dismiss="modal" class="btn btn-ok">
+                                ACEPTAR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Fin-->
+<!--Inicio Modal Favoritos-->
+
+<div class="modal fade modal-mis-filtros" tabindex="-1" role="dialog" id="ModalFavoritos">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding: 20px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modal-favoritos-titulo">
+                </h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="table-title">
+                                        <th>
+                                            <input id="txtFavoritoF" type="text" />
+                                            <div id="autocompleteFavoritoF" class="autocomplete_content"></div>
+
+                                            <a id="lnkBuscarF"><img src="/Content/Images/bot_lupal_off.png" title="Buscar" width="20" height="20" class="cursor-action" /></a>
+                                            <a id="lnkRestablecerF"><img src="/Content/Images/bot_recarga_off.png" title="Restablecer" width="20" height="20" class="cursor-action" /></a>
+                                            <select id="cboFavoritosF" name="cboFavoritosF"></select>
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="modal-favoritos-body">
+                                </tbody>
+
+                            </table>
+                            
+                            <div id="pagingFavourites" class="pagedList" data-tipoFavorito="">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button id="btnAgregarFavAFiltros" class="btn btn-addToFilters pull-right">
+                            Agregar a Filtros
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Fin-->
+<!-- Inicico - Modal Ventana Aviso-->
+
+<div class="modal fade ventana_fondo" tabindex="-1" role="dialog" id="ModalVentanaAviso">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">
+                    <img src="/Content/Images/veritrade_logo.png" width="69" height="45" />
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <div class="text-center title-ventana-aviso"  >
+                            <span>
+                                Novedades Veritrade
+                            </span>
+                            <br />
+                            <span>
+                                &#161; Nueva  Base de Datos: M&#233;xico V&#237;a mar&#237;tima en detalle !
+                                <img src="/Content/Images/flag_mexico.png" alt="" />
+                            </span>
+                        </div>
+
+                        <div class="texto-ventana-aviso">
+                            <b>
+                                Estimados Amigos,
+                            </b>
+                        </div>
+
+                        <div class="texto-ventana-aviso">
+                            <p>
+                                Queremos comunicarles que a partir de ahora Veritrade cuenta con información de México Vía marítima en detalle.  Para acceder a esta información, tienes que escoger la Región: Latinoamerica y después escoger "México Detalle Marítimo":
+                            </p>                            
+                        </div>
+
+                        <div class="text-center">
+                            
+                            <!--img src="imagenes4/MXD_Es.png" width="464" height="229" border="1" /-->
+                        </div>
+
+                        <div class="texto-ventana-aviso">
+                            <p>
+                                Esta información ya se encuentra disponible para nuestros clientes de los Planes Full Latam y Latam Full World.
+														<br>Como siempre nuestro objetivo es mejorar la usabilidad, experiencia de uso y la calidad de nuestras bases de datos para el beneficio de nuestros clientes.
+                            </p>                          
+                        </div>
+
+                        <div class="texto-ventana-aviso">
+                            Si deseas adquirir los planes que tienen esta nueva base de datos
+                            <br />
+                            <button id="btnContactus" class="btn btn-contactus">
+                                Cont&#225;ctenos
+                            </button>
+                        </div>
+
+                        <div class="texto-ventana-aviso sign-ventana-aviso">
+                            Atentamente,
+                            <br />
+                            <b>
+                                El Equipo Veritrade
+                                <br />
+                                <i>Tu aliado en informaci&#243;n de comercio exterior de Latinoam&#233;rica y el mundo</i>
+                            </b>                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fin -->
+<!--Inicio - Modal Ventana Video-->
+<div class="modal fade ventana_fondo" tabindex="-1" role="dialog" id="ModalVentanaVideo">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">                    
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center title-ventana-video">
+                            <p>
+                                C&#243;mo buscar en Veritrade
+                            </p>                  
+                            <img src="/Content/Images/flecha_old.png" width="53" height="20" />
+                        </div>
+
+                        <div class="text-center texto-venta-video">
+                            <p>
+                                Queremos ayudarte a maximizar el uso que puedas darle a Veritrade. Por eso te brindamos estos tutoriales que te ayudar&#225;n a ti y a tu empresa a obtener toda la informaci&#243;n que necesitas cuando la necesitas.
+                            </p>                            
+                        </div>
+
+                        <div class="text-center iframe-video" style="margin-bottom: 20px;" >
+                            <iframe id="videoYoutube" src="https://www.youtube.com/embed/dw0qgNuIePQ?rel=0" class="video_parte04 youtube-frame" frameborder="0" allowfullscreen="allowfullscreen" ></iframe>
+                        </div>                        
+                        <p style="font-size: 13px;">
+                            <button id="btnNoShowMe" class="btn btn-ok"> No volver a mostrar </button>
+                            Puedes volver a ver los videos haciendo clic en &quot;Ver video tutorial&quot; ubicado en la barra superior
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Fin-->
+<!--Inicio Modal Popup dinámico -->
+        
+    <div class="modal fade ventana_fondo" tabindex="-1" role="dialog" id="ModalPopupDinamicoPlantilla">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">
+                        <img src="/Content/Images/veritrade_logo.png" width="69" height="45" />
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <div class="text-center title-ventana-aviso">
+                                <span id="popup_titulo">
+              
+                                </span>
+                            </div>
+
+                            <div class="texto-ventana-aviso">
+                                <p id="popup_texto">
+                                </p>
+                            </div>
+
+                            
+
+                            <div class="text-center">
+                                <img id="popup_image" src="" alt="" width="464" height="229" border="1" />
+                                <!--img src="imagenes4/MXD_Es.png" width="464" height="229" border="1" /-->
+                            </div>
+
+                            <div class="texto-ventana-aviso">
+                                <p id="popup_texto_2">
+                                </p>
+                            </div>
+
+                            <div class="texto-ventana-aviso">
+                                <p id="popup_contactenos"></p>
+                                <br />
+                                <button id="btnContactenos" class="btn btn-contactus">
+                                    Cont&#225;ctenos
+                                </button>
+                            </div>
+
+                            <div class="texto-ventana-aviso sign-ventana-aviso">
+                                <p id="popup_despedida">
+
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Fin-->
+<!--Inicio - Modal Ventana Contactenos-->
+<div class="modal fade ventana_fondo" tabindex="-1" role="dialog" id="ModalVentanaContactenos">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center title-ventana-contactenos">
+                            <p>
+                                Solicitud de contacto o soporte
+                            </p>
+                            <img src="/Content/Images/flecha_old.png" width="53" height="20" />
+                        </div>
+
+                        <div >
+                            <div class="form-group">
+                                <label for="txtMensaje">Mensaje</label>
+                                <textarea class="form-control" cols="45" id="txtMensaje" name="txtMensaje" rows="5">
+</textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button id="btnEnviarMensaje" class="btn">
+                                    Enviar &nbsp;&gt;
+                                </button>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Fin-->
+<!--Inicio Modal Ventana Mensaje-->
+<div class="modal fade ventana_fondo" tabindex="-1" role="dialog" id="ModalVentanaMensaje">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">
+
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">                       
+                        <div id="messageTitle" class="text-center title-ventana-mensaje" >
+                        </div>
+
+                        <div class="text-center texto-ventana-mensaje">
+                            <p id="message">
+                            </p>
+                            <p id="lnkContactenos">
+                                Si desea mas informaci&#243;n <a id="btnContactanos">cont&#225;ctenos</a>
+                            </p>
+                        </div>
+
+                        <div class="text-center">
+                            <button id="btnOKModalVentanaMensaje" class="btn btn-ok">
+                                ACEPTAR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Fin-->
+<!--Inicio Modal Ventana Mensaje-->
+<div class="modal fade ventana_fondo" tabindex="-1" role="dialog" id="ModalVentanaMensajeFree">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">
+
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">                       
+                        <div id="messageTitleFree" class="text-center title-ventana-mensaje" >
+                        </div>
+
+                        <div class="text-center texto-ventana-mensaje">
+                            <p id="messageFree">
+                            </p>
+                            <p id="lnkContactenosFree">
+                                Si tiene alguna consulta o desea migrar de plan:  <a id="btnContactanosFree">cont&#225;ctenos</a>
+                            </p>
+                        </div>
+
+                        <div class="text-center">
+                            <button id="btnOKModalVentanaMensajeFree" class="btn btn-ok">
+                                ACEPTAR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Fin-->
+<!--Inicio Modal Ventana Mensaje-->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalAgregarFavoritos">
+    <div class="modal-dialog modal-favorite" role="document">
+        <div class="modal-content" style="padding: 20px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">
+                    <span id="tituloAgregarFavoritos">
+                    </span>
+                    <span class="subTituloAgregarFavoritos">
+                        Seleccione los elementos a Agregar
+                    </span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="tablaAgregarFavoritos" class="table-responsive">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 form-agregarFavoritos">
+
+                        <div class="form-inline campos-agregarFavoritos" style="padding-right: 10px;">
+                            <div class="checkbox" style="padding-right: 10px;">
+                                <label>
+                                    <input id="chkAgregarAFavorito" type="checkbox"> <label id="lblAgregarAFavorito" for="chkAgregarAFavorito" style="font-size: 12px; min-height: 19px; "></label>
+                                </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <label style="font-size: 12px;">
+                                    <input id="chkCrearGrupo" type="checkbox"> Crear Nuevo Grupo
+                                </label>
+                            </div>
+
+                            <div class="form-group" style="padding-right:10px; padding-left: 5px;">
+                                <input style="font-size: 12px;" id="txtNuevoGrupo" type="text" class="form-control" />
+                            </div><br /><br />
+
+
+                            <div class="form-group" style="padding-right: 10px; font-size: 12px; padding-left: 5px;">
+                                <div class="checkbox" style="padding-right: 10px;">
+                                    <label style="font-size:12px;">
+                                        <input id="chkAgregarAGrupo" type="checkbox"> Agregar a Grupo
+                                    </label>
+                                </div>
+                                <select id="cboGrupos" class="form-control"></select>
+                            </div>
+
+                                <div class="checkbox" id="chkAlerta">
+                                    <label>
+                                        <input id="chkAgregarAlerta" type="checkbox"> <label id="lblAgregarAlerta" for="chkAgregarAlerta" style="font-size: 12px; min-height: 19px; ">Agregar a Mis Alertas</label>
+                                    </label>
+                                </div>
+                        </div>
+
+                        <div class="form-inline mensajeValidacion-agregarFavoritos">
+                            <span id="lblEstadoGrupos"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-12 text-center">
+                        <button id="btnAgregarAFav" class="btn btn-addToFilters">
+                            Agregar
+                        </button>
+                        <button id="CancelarFav" class="btn btn-addToFilters">
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--Fin-->
+<!--Inicio Modal Ver Regisros-->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalVerRegistro">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="padding: 20px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="titulo-verRegistro">
+
+                </h4>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-sm-12 divRecordsFoundVerRegistro">
+                        <label id="recordsFoundVerRegistro">
+                        </label>
+
+                        <select class="form-control filter-selectField-vt"
+                                id="cboDescargasVerRegistro"></select>
+
+                        <a id="downloadFileVerRegistro">
+                            <img src="/Content/Images/bot_excel_off.png" width="24" height="24" class="ico_excel" alt="" />
+                        </a>
+                        
+                    </div>
+                    <div class="col-sm-12" id="textoInfoComplementario">
+                    </div>
+                    <div class="col-sm-12 botonesAgregarVerRegistro">
+                        <button id="lnkAgregarFiltroSel" class="btn btn-addToFilters">
+                            Aplicar Filtros
+                        </button>
+
+                        <button id="lnkAgregarSelAFavoritos" class="btn btn-addToFilters"></button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="tablaVerRegistros" class="table-responsive">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--Fin-->
+<!--Inicio Modal Ver Sentinel -->
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalInfoSentinel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="padding: 20px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">
+                    Sentinel - Alertas y reportes de deudas
+                </h4>
+            </div>
+            <div class="modal-body">
+                
+                <div id="infoSentinel">
+                   
+                </div>
+           
+
+                <div class="row leyenda-info-sentinel">
+
+                    <div class="col-sm-2 item-lenyenda">
+                        <span>Score</span>
+                        <div class="texto-leyenda">
+                            Valor entre<br/>
+                            0.000 (MENOR RIESGO) y 6.000 (MAYOR RIESGO)
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-2 item-lenyenda">
+                        <span>
+                            Calificación SBS / Microf.
+                        </span>
+                        <ul>
+                            <li>
+                                CPP = Con problemas potenciales
+                            </li>
+                            <li>
+                                DEF = Deficiente
+                            </li>
+                            <li>
+                                DUD = Dudoso
+                            </li>
+                            <li>
+                                NOR = Normal
+                            </li>
+                            <li>
+                                PER = Pérdida
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-2 item-lenyenda">
+                        <span>
+                            Veces 24m
+                        </span>
+                        <ul>
+                            <li>
+                                BI = SBS / Micro Finanzas
+                            </li>
+                            <li>
+                                CC = Cuenta Corriente (Cerradas/Anuladas)
+                            </li>
+                            <li>
+                                CF = Créditos Financieros
+                            </li>
+                            <li>
+                                DI = Documentos Impagos
+                            </li>
+                            <li>
+                                DT = Deuda Tributaria
+                            </li>
+                            <li>
+                                FB = Flash Bancario
+                            </li>
+                            <li>
+                                PR = Protestos
+                            </li>
+                            <li>
+                                RN = Otros Reportes Negativos
+                            </li>
+                            <li>
+                                TA = Tarjetas Crédito (Cerradas/Anuladas)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-2 item-lenyenda">
+                        <span>
+                            Score Promedio
+                        </span>
+                        <div class="texto-leyenda">
+                            Valor entre <br/>
+                            0.000 (MENOR RIESGO) y 6.000 (MAYOR RIESGO)
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <span>Semáforos</span>
+                        <ul>
+                            <li>
+                                <img src="/Content/Images/semaforo_gris.png" width="20" height="20"/>
+                                Bajo riesgo / No reporta información de deudas
+                            </li>
+                            <li>
+                                <img src="/Content/Images/semaforo_verde.png" width="20" height="20"/>
+                                Mínimo riesgo / Sin deudas vencidas
+                            </li>
+                            <li>
+                                <img src="/Content/Images/semaforo_ambar.png" width="20" height="20"/>
+                                Mediano riesgo / Deudas con poco atraso
+                            </li>
+                            <li>
+                                <img src="/Content/Images/semaforo_rojo.png" width="20" height="20"/>
+                                Alto riesgo / Deudas con atraso significativo
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin-->
+<!--Inicio Modal Ver Informa Colombia -->
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalInfoColombia">
+    <div class="modal-dialog modal-lg" role="document" style="margin-top:10px;">
+        <div class="modal-content" style="padding: 20px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h1 class="modal-title">
+                    <!--Informa Colombia S.A-->
+                </h1>
+            </div>
+            <div class="modal-body">
+                <div id="infoColombia">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin-->
+<!--Inicio Modal Ver Descarga -->
+<div class="modal fade ventana_fondo" tabindex="-1" role="dialog" id="ModalVentanaDescarga">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">
+
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">                       
+                        <div id="messageTitleDescarga" class="text-center title-ventana-mensaje" >
+                        </div>
+
+                        <div class="text-center texto-ventana-mensaje">
+                            <p id="messageDescarga">
+                            </p>
+                            <p id="lnkContactenosDescarga">
+                                Si desea mas informaci&#243;n <a id="btnContactanos">cont&#225;ctenos</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Fin-->
+<!--Inicio Modal Ver Aranceles Partida -->
+<style>
+    #titulo-aranceles {
+        font-family: ProximaNova-Bold;
+        font-size: 14.5px;
+        color: #212934;
+        margin-left: 4%;
+    }
+
+</style>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="ModalInfoArancelesPartida">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="padding: 20px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <div style="text-align:right; margin-right:5%;">
+                    <strong>Fuente: </strong>
+                    <a class="sunat" href="http://www.aduanet.gob.pe/itarancel/arancelS01Alias" target="_blank" rel="noopener noreferrer">
+                        <img src="/Content/Images/sunat-logo.jpg" width="80" height="25" />
+                    </a>
+                </div>
+                <h4 id="titulo-aranceles" class="modal-title">
+                    Aranceles por partida
+                </h4>
+            </div>
+            <div class="modal-body">
+                <br />
+                <div id="subtituloPartidaArancel" class="text-center"></div>
+                <div id="detallePartidaArancel"></div>
+                <p align='center'>
+                    <font face='verdana,arial' size=1><B> N.A.:</B> No es aplicable para esta subpartida</font>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Fin-->
+<!--Inicio Modal Ver Información de México detalle full -->
+
+<div class="modal fade modal-consulta" tabindex="-1" role="dialog" id="ModalInfoMexicoDetalleFull">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding: 20px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <img src="/Content/Images/veritrade_logo.png" witdh="50" height="50" alt="Alternate Text" />
+                <h4 class="modal-title text-center">
+                    <strong> Comunicado Base de datos M&#233;xico Detalle Full</strong>
+                </h4>
+            </div>
+            <br />
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div style="text-align: justify;">
+                            <p>Estimados Clientes,</p>
+                            <p>Les comunicamos que estamos teniendo un problema con la actualización de la Aduana de México, 
+								tenemos dos meses de retraso debido a que han habido cambios en la SAT (Servicio de Administración Tributaria de México) desde fines del 2021.</p>
+                            <p>Aún no tenemos fecha exacta en la que recibiremos la información, 
+								estamos trabajando con nuestro proveedor quien está haciendo todo lo posible por tener las actualizaciones en el menor tiempo posible.</p>
+                            <p>Atentamente, </p>
+                            <p>El Equipo de Veritrade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Fin-->
+<!--Inicio Modal Ver Información de México detalle maritimo -->
+
+<div class="modal fade modal-consulta" tabindex="-1" role="dialog" id="ModalInfoMexicoDetalleMaritimo">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding: 20px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <img src="/Content/Images/veritrade_logo.png" witdh="50" height="50" alt="Alternate Text" />
+                <h4 class="modal-title text-center">
+                    <strong> Comunicado Base de datos M&#233;xico Detalle Mar&#237;timo</strong>
+                </h4>
+            </div>
+            <br />
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div style="text-align: justify;">
+                            <p>Estimados Clientes,</p>
+                            <p>Les queremos comunicar que por motivos ajenos a nosotros y muy relacionados a los problemas de procesos y accesos de nuestros proveedores de informaci&#243;n, debido a la pandemia por el COVID-19, estamos teniendo problemas con la informaci&#243;n en el campo de informaci&#243;n del nombre de empresas de M&#233;xico Detalle Mar&#237;timo. Aproximadamente un 20% de las bases de datos de este campo de informaci&#243;n de los meses de enero, febrero y marzo no est&#225; validado.</p>
+                            <p>Estamos trabajando con nuestro proveedor para validar estos campos de informaci&#243;n en el menor tiempo posible, pero hemos visto pertinente, dada la crisis mundial que venimos afrontando, el cargar la informaci&#243;n on-line al 100% para poder brindarles a ustedes la informaci&#243;n restante (80%) la cual si est&#225; validada.</p>
+                            <p>Lamentamos los inconvenientes que esta situaci&#243;n pueda ocasionarles, por el momento est&#225; sucediendo de esta manera, pero esperamos corregirlo en el menor plazo posible.</p>
+                            <p>Atentamente, </p>
+                            <p>El Equipo de Veritrade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Fin-->
+<!--Inicio Modal Ver Información de Colombia 2021 -->
+
+<div class="modal fade modal-consulta" tabindex="-1" role="dialog" id="ModalInfoColombia2021">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding: 20px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icon-close-modal" aria-hidden="true">&times;</span>
+                </button>
+                <img src="/Content/Images/veritrade_logo.png" witdh="50" height="50" alt="Alternate Text" />
+                <h4 class="modal-title text-center">
+                    <strong> CAMBIOS EN LA INFORMACI&#211;N DE LA ADUANA COLOMBIANA</strong>
+                </h4>
+            </div>
+            <br />
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div style="text-align: justify;">
+                            <p>Estimado usuario,</p>
+                            <p>Les comunicamos que la Direcci&#243;n de Impuestos y Aduanas Nacionales (DIAN), ha suprimido el env&#237;o de la informaci&#243;n de los nombres de las empresas colombianas, asi como de los proveedores / consignatarios (empresa extranjera) y de la descripci&#243;n comercial, de acuerdo a lo indicado en el manual de Protecci&#243;n de Datos Personales MN-IC-0062.</p>
+                            <p>Frente a esto, con acciones de machine learning y miner&#237;a de datos, predecimos la informaci&#243;n de estas columnas a trav&#233;s de nuestro servicio de VeriEngine.</p>
+                            <p>Estamos trabajando con las autoridades pertinentes para el restablecimiento de la informaci&#243;n con el objetivo primordial que es la necesidad de informaci&#243;n del mercado.</p>
+                            <p>Esta situaci&#243;n afectar&#225; la informaci&#243;n correspondiente al mes de Marzo 2021 en adelante.</p>
+                            <p>Esperamos a la brevedad poder restablecer esta informaci&#243;n y poder informarles buenas noticias respecto a esto.</p>
+                            <p>Atentamente, </p>
+                            <p>El Equipo de Veritrade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Fin-->
+<!--Inicio Modal Aviso 202109 -->
+
+<!--Fin-->
+<!--Inicio Modal Ver DetalleExelById -->
+
+<div id="infoDEResult"></div>
+<!--Fin-->
+
+
+    </div>
+
+    <script src="/bundles/jquery?v=FWcBkkwcgyhtuhlMeKHNpIGiEzxz1LM7xza_ndBTbLw1"></script>
+
+    <script src="/bundles/bootstrap?v=-g7cxTWQV6ve_iRyKtg7LoBytQltgj_w8zTNeaLaBc41"></script>
+
+    <script src="/bundles/jqueryval?v=x63JhYAtPoWfuvvzOG4ie0IbeC8KtI5Q_Ln6iJWChUE1"></script>
+
+    
+
+    <script src="/bundles/highcharts?v=2o7ZUnX8wOkSLL51CoH_Hw50Yh_OhtE3jLeQ2ByPstE1"></script>
+
+    <script src="/bundles/bootstrapDatepicker?v=7TMH9_7kDLh96RTGKihUn52-GJNWOVx1isdpx5AGA5U1"></script>
+
+    
+    <script src="/Scripts/jquery-ui.min.js"></script>
+    <script src="/Scripts/Plugins/jquery.twbsPagination.js" defer type="text/javascript"></script>
+    
+    
+    
+
+    <script src="/Scripts/Plugins/jquery.dotdotdot.js"></script>
+    <script src="/Scripts/moment.min.js"></script>
+    <script src="/Scripts/MixPanel/MisBusquedas/MisBusquedasMP.js?2" type="text/javascript"></script>
+    <script src="/bundles/mis-busquedas?v=IqvLILidFndZF1jiMVO9lgyJTnOfs8k57WTu6oDamuI1"></script>
+
+
+<script type="text/javascript">
+        var t;
+        var timeout = 15* 60 * 1000;//150 * 60 * 1000;
+        console.log("TimeOut: " + timeout);
+        //Obtiene las notas y el detalle según código país si es que existe en la BD
+        function ObtenerNotaYDetallesPais() {
+            $.ajax({
+                url: "/es/mis-busquedas/ObtenerNotaYDetallesPais",
+                type: "POST",
+                dataType: "json",
+                 data: {
+                     codigoPais: $('#cboPais').val(),
+                     lenguaje : 'es'
+                },
+                success: function (data) {
+                    if (data.datosPais.idMensajePais > 0) {
+                        $("#notesCountry").text(data.datosPais.notas);
+                        $("#detailsCountry").text(data.datosPais.detalles);
+                        $("#messageAduana").css('visibility', 'visible');
+                    } else {
+                         $("#messageAduana").css('visibility', 'hidden');
+                    }
+                }
+            });
+        }
+
+        function SessionExpiredAlert() {
+            t = setTimeout(function () {
+                $('#ModalVentanaSesion').modal({
+                    show: true,
+                    backdrop: 'static',
+                    keyboard: false
+                });
+            }, timeout);
+            console.log("Sesion expirada");
+        };
+
+        function InIEventSession() {
+            clearTimeout(t);
+            SessionExpiredAlert();
+        };
+
+        function MensajesConsole() {
+
+            
+        }
+
+        function Search(cul) {
+
+             $.ajax({
+                url: "/es/mis-busquedas/SearchCulture",
+                type: "POST",
+                dataType: "json",
+                 data: {
+                     cultur : cul
+                },
+                success: function (data) {
+                    console.clear()
+                    console.log(data)
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            ObtenerNotaYDetallesPais();
+
+            $('#cboPais').change(function(){
+                ObtenerNotaYDetallesPais();
+            });
+
+
+
+            Highcharts.SVGRenderer.prototype.symbols.download = function (x, y, w, h) {
+                var path = [
+                    // Arrow stem
+                    'M', x + w * 0.5, y,
+                    'L', x + w * 0.5, y + h * 0.7,
+                    // Arrow head
+                    'M', x + w * 0.3, y + h * 0.5,
+                    'L', x + w * 0.5, y + h * 0.7,
+                    'L', x + w * 0.7, y + h * 0.5,
+                    // Box
+                    'M', x, y + h * 0.9,
+                    'L', x, y + h,
+                    'L', x + w, y + h,
+                    'L', x + w, y + h * 0.9
+                ];
+                return path;
+            };
+
+            LoadingAdminPage.showOrHideLoadingPage(false);
+            RegisterEventsListenerDeFiltros();
+            //RegisterEventsListenerDeMisFavorito();
+
+            ModalAdmin.registerShowByShowOption('ModalVentanaAviso', (('False').toLowerCase() == "true"));
+
+            $("#btnContactus").on('click',
+                function() {
+                    ModalAdmin.hideAndShow("ModalVentanaAviso", "ModalVentanaContactenos");
+                });
+
+            $("#btnContactanos").on('click',
+                function () {
+                    ModalAdmin.hideAndShow("ModalVentanaMensaje", "ModalVentanaContactenos");
+                });
+
+            $("#btnContactanosFree").on('click',
+                function () {
+                    ModalAdmin.hideAndShow("ModalVentanaMensajeFree", "ModalVentanaContactenos");
+                })
+
+            $(" #btnContactenos").on('click',
+                function () {
+                    ModalAdmin.hideAndShow("ModalPopupDinamicoPlantilla", "ModalVentanaContactenos");
+                });
+
+
+            ModalAdmin.registerShownEventListener('ModalVentanaContactenos');
+            ModalAdmin.registerHiddenEventListener('ModalVentanaContactenos');
+
+            $("#btnNoShowMe").on('click',
+                function() {
+                    $.ajax({
+                        type: "POST",
+                        url: '/es/mis-busquedas/ActualizaOcultarVideo',
+                        success: function(response) {
+                            ModalAdmin.hide("ModalVentanaVideo");
+                        },
+                        error: function(data) {
+                            console.log(data);
+                        }
+                    });
+                });
+
+            $("#btnEnviarMensaje").on('click',
+                function() {
+                    var txtMensaje = $("textarea#txtMensaje").val();
+                    if (txtMensaje == "")
+                        return;
+                    $.ajax({
+                        type: "POST",
+                        url: '/es/mis-busquedas/EnviarMensajeContactenos',
+                        data: {
+                            Mensaje: txtMensaje
+                        },
+                        beforeSend: function() {
+                        },
+                        success: function(response) {
+                            $("textarea#txtMensaje").val("");
+                            ModalAdmin.hide("ModalVentanaContactenos");
+                            ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                                "messageTitle",
+                                "Solicitud de contacto o soporte",
+                                "message",
+                                "Su solicitud está siendo procesada y nos contactaremos a la brevedad con usted",
+                                "lnkContactenos",
+                                false);
+                        },
+                        error: function(data) {
+                            console.log(data);
+                        }
+                    });
+                });
+
+            ModalAdmin.registerShownEventListener('ModalVentanaMensaje');
+            ModalAdmin.registerHiddenEventListener('ModalVentanaMensaje');
+
+            ModalAdmin.registerShowByShowOption('ModalVentanaVideo', !('False'.toLowerCase() == "true"));
+
+            // Ruben 202109
+            //ModalAdmin.registerShowByShowOption('ModalAviso202109', !('False'.toLowerCase() == "true"));
+            
+            //var IdUsuario202109 = '333872';
+            //if (IdUsuario202109 == "180700" || IdUsuario202109 == "143503" || IdUsuario202109 == "261273" || IdUsuario202109 == "66993") {
+            //    ModalAdmin.registerShowByShowOption('ModalAviso202109', !('False'.toLowerCase() == "true"));
+            //}
+
+            $("#btnNoShowMeAviso").on('click',
+                function() {
+                    $.ajax({
+                        type: "POST",
+                        url: '/es/mis-busquedas/ActualizaOcultarAviso',
+                        success: function(response) {
+                            ModalAdmin.hide("ModalAviso202109");
+                        },
+                        error: function(data) {
+                            console.log(data);
+                        }
+                    });
+                });
+
+            $("#btnOKModalVentanaMensaje").on('click',
+                function() {
+                    ModalAdmin.hide("ModalVentanaMensaje");
+                });
+
+            var urlAgregarFavAFiltrosClick = '/es/mis-busquedas/AgregarFavAFiltros_Click';
+
+            $("#btnAgregarFavAFiltros").click(function() {
+                MisFavoritos.AgregarFavAFiltrosClickEventListener(urlAgregarFavAFiltrosClick, 'es');
+            });
+
+            MisFavoritos.txtFavoritoFautocompleteListener('/es/mis-busquedas/FavoritoFautocomplete',
+                '/es/mis-busquedas/AgregaFavoritoAutocompleteSelect',
+                'es');
+
+            $("#lnkBuscarF").click(function() {
+                MisFavoritos.clickBuscarF('/es/mis-busquedas/BuscarFclick', 'es');
+            });
+
+            $("#lnkRestablecerF").click(function() {
+                MisFavoritos.clickRestablecerF('/es/mis-busquedas/RestablecerFclick', 'es');
+            });
+
+            MisFavoritos.pagingClickListener('es');
+
+            initAutocompleteFiltros();
+            initAutoCompleteFiltrosMixPanel(); // JANAQ 060620
+            Filtros.cleanFieldsByFieldChange();
+
+            //Funciones de agregar registros a mis favoritos
+            RegisterEventsListenerAgregarFavoritos();
+
+            //Eventos de ver registros
+            $("#lnkAgregarFiltroSel").click(function() {
+                VerRegistro.AgregarFiltroSeleccionado('/es/mis-busquedas/AgregarFiltroSeleccionado');
+            });
+
+            $("#lnkAgregarSelAFavoritos").click(function() {
+                VerRegistro.AgregarFiltrosSeleccionadoAFavoritos('/es/mis-busquedas/AgregarFiltrosSeleccionadoAFavoritos');
+            });
+
+            function PagesPaginationVerRegistros(UrlPost, TotalPages, vIdRegistro) {
+                $('#pagingVerRegistros').twbsPagination({
+                    totalPages: TotalPages,
+                    visiblePages: 10,
+                    hideOnlyOnePage: true,
+                    initiateStartPageClick: false,
+                    onPageClick: function (event, page) {
+                        $.ajax({
+                            type: "POST",
+                            url: UrlPost,
+                            data: {
+                                pagina: page,
+                                codPais: vIdRegistro,
+                                codPais2: $("#cboPais2").find("option:selected").val(),
+                                tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val()
+                            },
+                            beforeSend: function () {
+                                LoadingAdminPage.showOrHideLoadingPage(true);
+                            },
+                            success: function (response) {
+                                //$("#paingVerRegistros li").removeClass("active");
+                                //$(vThis).parent().addClass("active");
+
+                                $("#tbodyVerRegistros").html(response.filasVerRegistro);
+                                var vTxtDesComercial = $("#txtDesComercialBB").val();
+                                if (vTxtDesComercial != "") {
+                                    $.each($("#tbodyVerRegistros p"), function () {
+                                        //console.log($(this).html())
+                                        //var arreglo = $(this).html().split("<a");
+                                        //var etiqueta = '<a ' + arreglo[1];
+                                        var term = vTxtDesComercial;
+                                        //console.log(term);
+                                        var src_str = $(this).html();
+                                        //var src_str = arreglo[0];
+                                        //var term = "mY text";
+                                        term = term.replace(/(\s+)/, "(<[^>]+>)*$1(<[^>]+>)*");
+                                        //console.log(term);
+                                        var pattern = new RegExp("(" + term + ")", "gi");
+
+                                        src_str = src_str.replace(pattern, "<mark>$1</mark>");
+                                        src_str = src_str.replace(/(<mark>[^<>]*)((<[^>]+>)+)([^<>]*<\/mark>)/, "$1</mark>$2<mark>$4");
+
+                                        $(this).html(src_str);
+                                        //$(this).html(src_str + etiqueta);
+                                        //console.log(src_str + etiqueta);
+                                    });
+                                }
+
+                                LoadingAdminPage.showOrHideLoadingPage(false);
+                            },
+                            error: function (data) {
+                                console.log(data);
+                            }
+                        });
+                    }
+                })
+            }
+
+            $(".verInfo").click(function () {
+                ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                    "messageTitle",
+                    "Veritrade",
+                    "message",
+                    $("#detailsCountry").text(),
+                    "lnkContactenos",
+                    false);
+            });
+
+            $(document).on("click", ".InfoComplement,.lnkVerRegistros[data-filtro=InfoTabla]", function () {
+                //console.log($(this).attr("data-idregistro"));
+                console.log(".lnkVerRegistros[data-filtro=InfoTabla]")
+                var vFiltro = $(this).data("filtro");
+                var vIdRegistro = $(this).data("idregistro");
+                var listaFiltros = [];
+                $("#lstFiltros option").each(function () {
+                    var vThis = $(this);
+                    if (vThis.length) {
+
+                        //var division = vThis.text().trim().split("] ");
+                        var pos = vThis.text().trim().indexOf("] ")
+                        var division1 = vThis.text().trim().substring(0, pos + 2);
+                        var division2 = vThis.text().trim().substring(pos + 2);
+                        var segundo = division2;
+                        var posicion = segundo.indexOf(" ");
+                        var dev1 = segundo.substring(0, posicion)
+                        var dev2 = segundo.substring(posicion)
+
+                        if (dev1.length > 6) {
+                            dev1 = dev1.substring(0, 6);
+                        }
+
+                        var union = division1 + dev1 + dev2;
+
+                        //listaFiltros.push(vThis.text().trim());
+                        listaFiltros.push(union);
+                    }
+                });
+                var vListaFiltros = listaFiltros.join(" | ");
+                $.ajax({
+                    type: "POST",
+                    url: '/es/mis-busquedas/VerRegistros',
+                    data: {
+                        filtro: vFiltro,
+                        idregistro: vIdRegistro,
+                        tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                        codPais: vIdRegistro,
+                        codPais2: $("#cboPais2").find("option:selected").val(),
+                        anioMesIni: Fecha.getYearAndMonth($('#cboDesde').datepicker('getDate')),
+                        anioMesFin: Fecha.getYearAndMonth($('#cboHasta').datepicker('getDate')),
+                        indexCboPaisB: $("#cboPaisB").prop('selectedIndex'),
+                        codPaisB: $("#cboPaisB").find("option:selected").val(),
+                        filtros: vListaFiltros,
+                        codPais3: $("#cboPais").find("option:selected").val(),
+                        numFiltrosExistentes: $("#lstFiltros option").length
+                    },
+                    beforeSend: function () {
+                        LoadingAdminPage.showOrHideLoadingPage(true);
+                    },
+                    success: function (response) {
+                        //console.log(response)
+                        if (response.objMensaje != null) {
+                            LoadingAdminPage.showOrHideLoadingPage(false);
+                            ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                                "messageTitle",
+                                response.objMensaje.titulo,
+                                "message",
+                                response.objMensaje.mensaje,
+                                "lnkContactenos",
+                                response.objMensaje.flagContactenos);
+                        } else {
+                            //$("#downloadFileVerRegistro").addClass("no-display");
+                            $("#titulo-verRegistro").html(response.lblFiltroSel);
+                            $("#recordsFoundVerRegistro").text(response.lblRecordsFound);
+                            console.log(response.textoInfoComplementario)
+                            $("#textoInfoComplementario").html(response.textoInfoComplementario);
+                            if (!response.maximoLimiteFiltros) {
+                                if (response.lnkAgregarFiltroSelVisible) {
+                                    $("#lnkAgregarFiltroSel").removeClass("no-display");
+                                } else {
+                                    $("#lnkAgregarFiltroSel").addClass("no-display");
+                                }
+                            } else {
+                                $("#lnkAgregarFiltroSel").addClass("no-display");
+                            }
+
+                            if (response.cboDescargas2Visible) {
+                                $("#cboDescargasVerRegistro").removeClass("no-display");
+                                $("select#cboDescargasVerRegistro").html("");
+                                $.each(response.optionsDescargas,
+                                    function (index, val) {
+                                        $("select#cboDescargasVerRegistro")
+                                            .append("<option value=" + val.value + ">" + val.text + "</option>");
+                                    });
+                            } else {
+                                $("#cboDescargasVerRegistro").addClass("no-display");
+                            }
+
+                            if (response.lnkAgregarSelAFavoritosVisible) {
+                                $("#lnkAgregarSelAFavoritos").removeClass("no-display");
+                                $("#lnkAgregarSelAFavoritos").text(response.lnkAgregarSelAFavoritos);
+                                $("#lnkAgregarSelAFavoritos").val(response.idDescargaDefault);
+                            } else {
+                                $("#lnkAgregarSelAFavoritos").addClass("no-display");
+                            }
+
+                            $("#tablaVerRegistros").html("");
+                            $("#tablaVerRegistros").html(response.tablaVerRegistro);
+
+
+                            if (response.totalPages > 1) {
+                                
+                                PagesPaginationVerRegistros('/es/mis-busquedas/VerRegistrosPageIndexChanging', response.totalPages, vIdRegistro);
+                            }
+                            
+
+                            $("#lnkBuscarDUA2 , #lnkRestablecerDUA2").click(function () {
+
+                                var vTxtDuaB = $("#txtDUAB").val();
+                                if (this == $("#lnkRestablecerDUA2")[0]) {
+                                    vTxtDuaB = "";
+                                    $("#txtDUAB").val("");
+                                }
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: '/es/mis-busquedas/BuscarPorDuaVerRegistros',
+                                    data: {
+                                        txtDuaB: vTxtDuaB,
+                                        tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                                        codPais: vIdRegistro,
+                                        codPais2: $("#cboPais2").find("option:selected").val(),
+                                        anioMesIni: Fecha.getYearAndMonth($('#cboDesde').datepicker('getDate')),
+                                        anioMesFin: Fecha.getYearAndMonth($('#cboHasta').datepicker('getDate')),
+                                        indexCboPaisB: $("#cboPaisB").prop('selectedIndex'),
+                                        codPaisB: $("#cboPaisB").find("option:selected").val(),
+                                        codPaisRep: $("#cboPais").find("option:selected").val()
+                                    },
+                                    beforeSend: function () {
+                                        LoadingAdminPage.showOrHideLoadingPage(true);
+                                    },
+                                    success: function (response) {
+                                        if (response.objMensaje != null) {
+                                            LoadingAdminPage.showOrHideLoadingPage(false);
+                                            ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                                                "messageTitle",
+                                                response.objMensaje.titulo,
+                                                "message",
+                                                response.objMensaje.mensaje,
+                                                "lnkContactenos",
+                                                response.objMensaje.flagContactenos);
+                                        } else {
+                                            $("#lblResultadoDesComercial2").text("");
+                                            $("#txtDesComercialBB").val("");
+
+                                            $("#lblResultadoDUA2").text(response.resultadoDuaVerRegistro);
+                                            $("#tbodyVerRegistros").html(response.tablaVerRegistro);
+                                            if (response.totalPages > 1) {
+                                                $("#pagingVerRegistros").twbsPagination('destroy');
+                                                $("#divPagingVerRegistros").removeClass("no-display");
+                                                
+                                                PagesPaginationVerRegistros('/es/mis-busquedas/VerRegistrosPageIndexChanging', response.totalPages, vIdRegistro);
+                                            } else {
+                                                $("#pagingVerRegistros").twbsPagination('destroy');
+                                                $("#divPagingVerRegistros").addClass("no-display");
+                                            }
+                                            LoadingAdminPage.showOrHideLoadingPage(false);
+                                        }
+                                    },
+                                    error: function (dataError) {
+                                        console.log(dataError);
+                                        //LoadingAdminPage.showOrHideLoadingPage(false);
+                                    }
+                                });
+                            });
+
+                            
+
+                            $("#lnkBuscarDesComercial2, #lnkRestablecerDesComercial2").click(function () {
+                                var vTxtDesComercial = $("#txtDesComercialBB").val();
+                                if (this == $("#lnkRestablecerDesComercial2")[0]) {
+                                    vTxtDesComercial = "";
+                                    $("#txtDesComercialBB").val("");
+                                }
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: '/es/mis-busquedas/BuscarPorDesComercialVerRegistro',
+                                    data: {
+                                        txtDesComercialBB: vTxtDesComercial,
+                                        tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                                        codPais: vIdRegistro,
+                                        codPais2: $("#cboPais2").find("option:selected").val(),
+                                        anioMesIni: Fecha.getYearAndMonth($('#cboDesde').datepicker('getDate')),
+                                        anioMesFin: Fecha.getYearAndMonth($('#cboHasta').datepicker('getDate')),
+                                        indexCboPaisB: $("#cboPaisB").prop('selectedIndex'),
+                                        codPaisB: $("#cboPaisB").find("option:selected").val(),
+                                        codPaisRep: $("#cboPais").find("option:selected").val()
+                                    },
+                                    beforeSend: function () {
+                                        LoadingAdminPage.showOrHideLoadingPage(true);
+                                    },
+                                    success: function (response) {
+                                        if (response.objMensaje != null) {
+                                            LoadingAdminPage.showOrHideLoadingPage(false);
+                                            ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                                                "messageTitle",
+                                                response.objMensaje.titulo,
+                                                "message",
+                                                response.objMensaje.mensaje,
+                                                "lnkContactenos",
+                                                response.objMensaje.flagContactenos);
+                                        } else {
+                                            $("#lblResultadoDUA2").val("");
+                                            $("#txtDUAB").val("");
+
+                                            $("#lblResultadoDesComercial2").text(response.resultadoDesComercialVerRegistro);
+                                            $("#tbodyVerRegistros").html(response.tablaVerRegistro);
+
+                                            if (vTxtDesComercial != "") {
+                                                $.each($("#tbodyVerRegistros p"), function () {
+                                                    //console.log($(this).html())
+                                                    //var arreglo = $(this).html().split("<a");
+                                                    //var etiqueta = '<a ' + arreglo[1];
+                                                    var term = vTxtDesComercial;
+                                                    //console.log(term);
+                                                    var src_str = $(this).html();
+                                                    //var src_str = arreglo[0];
+                                                    //var term = "mY text";
+                                                    term = term.replace(/(\s+)/, "(<[^>]+>)*$1(<[^>]+>)*");
+                                                    //console.log(term);
+                                                    var pattern = new RegExp("(" + term + ")", "gi");
+
+                                                    src_str = src_str.replace(pattern, "<mark>$1</mark>");
+                                                    src_str = src_str.replace(/(<mark>[^<>]*)((<[^>]+>)+)([^<>]*<\/mark>)/, "$1</mark>$2<mark>$4");
+
+                                                    $(this).html(src_str);
+                                                    //$(this).html(src_str + etiqueta);
+                                                    //console.log(src_str + etiqueta);
+                                                });
+                                            }
+
+                                            if (response.totalPages > 1) {
+                                                $("#pagingVerRegistros").twbsPagination('destroy');
+                                                $("#divPagingVerRegistros").removeClass("no-display");
+                                                //VerRegistro.TablePageIndexChanging(urlPageChangeTable, response.totalPages);
+                                                PagesPaginationVerRegistros('/es/mis-busquedas/VerRegistrosPageIndexChanging', response.totalPages, vIdRegistro);
+                                            } else {
+                                                $("#pagingVerRegistros").twbsPagination('destroy');
+                                                $("#divPagingVerRegistros").addClass("no-display");
+                                            }
+                                            LoadingAdminPage.showOrHideLoadingPage(false);
+                                        }
+                                    },
+                                    error: function (dataError) {
+                                        console.log(dataError);
+                                        //LoadingAdminPage.showOrHideLoadingPage(false);
+                                    }
+                                });
+                            });
+
+
+                            LoadingAdminPage.showOrHideLoadingPage(false);
+
+                            ModalAdmin.registerShowByShowOption("ModalVerRegistro", true);
+                        }
+
+                    },
+                    error: function (dataError) {
+                        console.log(dataError);
+                        //LoadingAdminPage.showOrHideLoadingPage(false);
+                    }
+                });
+
+
+            });
+
+            //Evento de generar archivo de ver detalle
+            $(document).on("click", "#downloadFileVerRegistro", function() {
+                var listaFiltros = [];
+                $("#lstFiltros option").each(function() {
+                    var vThis = $(this);
+                    if (vThis.length) {
+                        listaFiltros.push(vThis.text().trim());
+                    }
+                });
+                var idCbo = $(this).attr("id") === "downloadFileVerRegistro"
+                    ? "cboDescargasVerRegistro"
+                    : "DropDownDescarga";
+                var vListaFiltros = listaFiltros.join(" | ");
+                $.ajax({
+                    type: "POST",
+                    url: '/es/mis-busquedas/GetExcelVerRegistro',
+                    data: {
+                        tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                        codPais: $("#cboPais").find("option:selected").val(),
+                        codPais2: $("#cboPais2").find("option:selected").val(),
+                        anioMesIni: Fecha.getYearAndMonth($('#cboDesde').datepicker('getDate')),
+                        anioMesFin: Fecha.getYearAndMonth($('#cboHasta').datepicker('getDate')),
+                        indexCboPaisB: $("#cboPaisB").prop('selectedIndex'),
+                        codPaisB: $("#cboPaisB").find("option:selected").val(),
+                        codCboDescargas: $("#" + idCbo).find("option:selected").val(),
+                        filtros: vListaFiltros,
+                        FlagDirecto: "False" != "True",
+                        FlagDescarga: $(this).attr("id") == "downloadFileVerRegistro"
+                    },
+                    beforeSend: function () {
+                        LoadingAdminPage.showOrHideLoadingPage(true);
+                    },
+                    success: function (response) {
+                        LoadingAdminPage.showOrHideLoadingPage(false);
+                        if (response.objMensaje != null) {
+                            ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                                "messageTitle",
+                                response.objMensaje.titulo,
+                                "message",
+                                response.objMensaje.mensaje,
+                                "lnkContactenos",
+                                response.objMensaje.flagContactenos);
+                        } else {
+                            //if (response.infoArchivo.flagDirecto) {
+                            if (response.objMensajeFlag != null) {
+                                var ruta ="/es/mis-busquedas/DownloadFile/?file=" +
+                                    response.infoArchivo.fileName +
+                                    "&typeFile=" +
+                                    response.infoArchivo.extensionArchivo;
+                                var link = '<a id="idDescarga" href = "' + ruta + '" title = "' + response.objMensajeFlag.mensaje+'"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span><a/>';
+                                // console.log(link)
+                                ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaDescarga",
+                                    "messageTitleDescarga",
+                                    response.objMensajeFlag.titulo,
+                                    "messageDescarga",
+                                    link,
+                                    "lnkContactenosDescarga",
+                                    response.objMensajeFlag.flagContactenos);
+                            } else {
+                                window.location.href =
+                                    "/es/mis-busquedas/DownloadFile/?file=" +
+                                    response.infoArchivo.fileName +
+                                    "&typeFile=" +
+                                    response.infoArchivo.extensionArchivo;
+                            }
+                        }
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+            $(document).on("click", "#downloadFileVerRegistro2", function() {
+                var listaFiltros = [];
+                $("#lstFiltros option").each(function() {
+                    var vThis = $(this);
+                    if (vThis.length) {
+                        listaFiltros.push(vThis.text().trim());
+                    }
+                });
+                var idCbo = $(this).attr("id") === "downloadFileVerRegistro"
+                    ? "cboDescargasVerRegistro"
+                    : "DropDownDescarga";
+                var vListaFiltros = listaFiltros.join(" | ");
+                var txtDua, txtDesCom = "";
+                var lbl = undefined;
+                if ($("#txtDesComExtra").val() == "") {
+                    txtDua = $("#txtDuaExtra").val();
+                    txtDesCom = "";
+                    $("#txtDesComExtra").val("");
+                } else {
+                    txtDua = "";
+                    txtDesCom = $("#txtDesComExtra").val();
+                    $("#txtDuaExtra").val("");
+                }
+                $.ajax({
+                    type: "POST",
+                    url: '/es/mis-busquedas/GetExcelVerRegistro',
+                    data: {
+                        tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                        codPais: $("#cboPais").find("option:selected").val(),
+                        codPais2: $("#cboPais2").find("option:selected").val(),
+                        anioMesIni: Fecha.getYearAndMonth($('#cboDesde').datepicker('getDate')),
+                        anioMesFin: Fecha.getYearAndMonth($('#cboHasta').datepicker('getDate')),
+                        indexCboPaisB: $("#cboPaisB").prop('selectedIndex'),
+                        codPaisB: $("#cboPaisB").find("option:selected").val(),
+                        codCboDescargas: $("#" + idCbo).find("option:selected").val(),
+                        filtros: vListaFiltros,
+                        FlagDirecto: "False" != "True",
+                        FlagDescarga: $(this).attr("id") == "downloadFileVerRegistro",
+                        txtDua: txtDua,
+                        txtDesCom: txtDesCom
+                    },
+                    beforeSend: function () {
+                        LoadingAdminPage.showOrHideLoadingPage(true);
+                    },
+                    success: function (response) {
+                        LoadingAdminPage.showOrHideLoadingPage(false);
+                        if (response.objMensaje != null) {
+                            ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                                "messageTitle",
+                                response.objMensaje.titulo,
+                                "message",
+                                response.objMensaje.mensaje,
+                                "lnkContactenos",
+                                response.objMensaje.flagContactenos);
+                        } else {
+                            //if (response.infoArchivo.flagDirecto) {
+                            if (response.objMensajeFlag != null) {
+                                var ruta ="/es/mis-busquedas/DownloadFile/?file=" +
+                                    response.infoArchivo.fileName +
+                                    "&typeFile=" +
+                                    response.infoArchivo.extensionArchivo;
+                                var link = '<a id="idDescarga" href = "' + ruta + '" title = "' + response.objMensajeFlag.mensaje+'"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span><a/>';
+                                // console.log(link)
+                                ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaDescarga",
+                                    "messageTitleDescarga",
+                                    response.objMensajeFlag.titulo,
+                                    "messageDescarga",
+                                    link,
+                                    "lnkContactenosDescarga",
+                                    response.objMensajeFlag.flagContactenos);
+                            } else {
+                                window.location.href =
+                                    "/es/mis-busquedas/DownloadFile/?file=" +
+                                    response.infoArchivo.fileName +
+                                    "&typeFile=" +
+                                    response.infoArchivo.extensionArchivo;
+                            }
+                        }
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+            //Ocultar Modal Descarga
+            $(document).on("click", "#idDescarga", function () {
+                $("#ModalVentanaDescarga").modal('hide');
+            });
+            //Evento generar archivo excel DetalleB
+            $(document).on('click','.downloadExcelDetalleB',function() {
+                var listaFiltros = [];
+                $("#lstFiltros option").each(function() {
+                    var vThis = $(this);
+                    if (vThis.length) {
+                        listaFiltros.push(vThis.text().trim());
+                    }
+                });
+                var vListaFiltros = listaFiltros.join(" | ");
+                $.ajax({
+                    type: "POST",
+                    url: '/es/mis-busquedas/GetExcelDetalleB',
+                    data: {
+                        tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                        codPais: $("#cboPais").find("option:selected").val(),
+                        codPais2: $("#cboPais2").find("option:selected").val(),
+                        anioMesIni:Fecha.getYearAndMonth($('#cboDesde').datepicker('getDate')),
+                        anioMesFin: Fecha.getYearAndMonth($('#cboHasta').datepicker('getDate')),
+                        indexCboPaisB: $("#cboPaisB").prop('selectedIndex'),
+                        codPaisB: $("#cboPaisB").find("option:selected").val(),
+                        filtros: vListaFiltros,
+                        FlagDirecto: "False" != "True"
+                    },
+                    beforeSend: function () {
+                        LoadingAdminPage.showOrHideLoadingPage(true);
+                    },
+                    success: function (response) {
+                        if (response.objMensaje != null) {
+
+                            LoadingAdminPage.showOrHideLoadingPage(false);
+                            ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                                "messageTitle",
+                                response.objMensaje.titulo,
+                                "message",
+                                response.objMensaje.mensaje,
+                                "lnkContactenos",
+                                response.objMensaje.flagContactenos);
+                        } else {
+                            //if (response.infoArchivo.flagDirecto) {
+                            if (response.objMensajeFlag != null) {
+
+                                var ruta ="/es/mis-busquedas/DownloadFile/?file=" +
+                                    response.infoArchivo.fileName +
+                                    "&typeFile=" +
+                                    response.infoArchivo.extensionArchivo;
+                                //var link = '<a href = "' + ruta + '">' + response.objMensajeFlag.mensaje + '<a/>';
+                                var link = '<a id="idDescarga" href = "' + ruta + '" title = "' + response.objMensajeFlag.mensaje +'"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span><a/>';
+                                // console.log(link)
+
+                                LoadingAdminPage.showOrHideLoadingPage(false);
+                                ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaDescarga",
+                                    "messageTitleDescarga",
+                                    response.objMensajeFlag.titulo,
+                                    "messageDescarga",
+                                    link,
+                                    "lnkContactenosDescarga",
+                                    response.objMensajeFlag.flagContactenos);
+                            } else {
+                                LoadingAdminPage.showOrHideLoadingPage(false);
+                                window.location.href =
+                                    "/es/mis-busquedas/DownloadFile/?file=" +
+                                    response.infoArchivo.fileName +
+                                    "&typeFile=" +
+                                    response.infoArchivo.extensionArchivo;
+                            }
+                        }
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+
+            //Config Inicial de Filtros periodos
+            $("#cboDesde").datepicker({
+                    format: 'M yyyy',
+                    minViewMode: "months",
+                    startDate: moment('1/1/2014 00:00:00').toDate(),
+                    endDate :  moment('4/1/2022 00:00:00').toDate(),
+                    language : 'es',
+                    enableOnReadonly: true,
+                    keyboardNavigation:false,
+                    autoclose: true,
+                }).on('changeMonth', function(e) {
+                    var fechaPrev = $('#cboDesde').datepicker('getDate');
+                    var fechaPost = e.date;
+                    if (fechaPrev != fechaPost) {
+                        Filtros.onChangeCboDesde(fechaPost);
+                    }
+                })
+                .keypress(function (e) {
+                    e.preventDefault();
+                    return false;
+                });
+            $("#cboDesde").datepicker("setDate", moment('4/1/2022 00:00:00').toDate());
+
+            $("#cboHasta").datepicker({
+                format:'M yyyy',
+                minViewMode: "months",
+                startDate: moment('4/1/2022 00:00:00').toDate(),
+                endDate :  moment('4/1/2022 00:00:00').toDate(),
+                language: 'es',
+                enableOnReadonly: true,
+                keyboardNavigation: false,
+                autoclose: true,
+            }).keypress(function (e) {
+                e.preventDefault();
+                return false;
+            });
+            $("#cboHasta").datepicker("setDate", new Date('4/1/2022 00:00:00'));
+
+            // from: _applyFilter
+
+            var eventTextFilterDua = function (txtDua, txtDesCom, lbl) {
+                Busqueda.extraFiltroDetalleExcel(urlDetalleExcel,
+                    tipoFiltroTab,
+                    urlOrdenarTabla,
+                    urlPagingDetalleExcel,
+                    urlVerRegistros,
+                    urlPageChangeVerRegistro,
+                    urlBuscarPorDuaVerRegistro,
+                    urlBuscarPorDesComercialVerRegistro,
+                    urlVerSentinel,
+                    urlIrASentinel,
+                    urlDetalleExcelId,
+                    txtDua, txtDesCom, lbl);
+            };
+
+
+            $(document).on("click", ".lnkReset", function (e) {
+                //$(this).closest("th").find("input:text").val("");
+                $(".lnkReset").each(function () {
+                    $(this).closest("th").find("input:text").val("");
+                });
+                eventTextFilterDua("", "");
+                $("#lblResultDesc,lblResultDua").html("");
+                e.stopPropagation();
+            });
+            $(document).on("click", ".lnkSearch", function (e) {
+                var inp = $(this).closest("th").find("input").eq(0);
+                var txtDua, txtDesCom = "";
+                var lbl = undefined;
+                if ($(inp).attr("id") == "txtDuaExtra") {
+                    txtDua = $(inp).val();
+                    txtDesCom = "";
+                    $("#txtDesComExtra").val("");
+                    lbl = "#lblResultDua";
+                } else {
+                    txtDua = "";
+                    txtDesCom = $(inp).val();
+                    $("#txtDuaExtra").val("");
+                    lbl = "#lblResultDesc";
+                }
+                eventTextFilterDua(txtDua, txtDesCom, lbl);
+                e.stopPropagation();
+                e.preventDefault();
+                return false;    //<---- Add this line
+            });
+
+            $(document).on("keypress", "#txtDuaExtra,#txtDesComExtra", function (e) {
+                if (e.which == 13) {
+                    $(this).closest("th").find(".lnkSearch").eq(0).trigger("click");
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;    //<---- Add this line
+                }
+            });
+
+            ;
+
+            var listFilter = [];
+
+        });
+         //Fin First OnReady
+
+        $(document).ready(function() {
+            InIEventSession();
+            $('#ModalVentanaSesion').on('hidden.bs.modal', function () {
+                window.location.href = '/';
+            });
+
+            $('#ModalVentanaVideo').on('hidden.bs.modal', function () {
+               //alert("se va a detener")
+                /*$('#videoYoutube').each(function(){
+                    this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+                });*/
+                var videoURL = $('#videoYoutube').prop('src');
+                videoURL = videoURL.replace("&autoplay=1", "");
+                //alert("se va a detener" + videoURL)
+                $('#videoYoutube').prop('src','');
+                $('#videoYoutube').prop('src',videoURL);
+            });
+
+        });
+
+        $(document).ajaxError(function (event, jqxhr, settings, thrownError) {
+            if (jqxhr.status === 401) {
+                window.location.href = '/';
+            } else {
+                console.log(thrownError);
+            }
+        });
+        $( document ).ajaxComplete(function() {
+            InIEventSession();
+        });
+
+        /*ModalAdmin.showVentanaMensajeEnlace = function (idModalShow,
+            idTitle,
+            title,
+            idMessage,
+            message,
+            idContactenos,
+            flagContactenos) {
+            $("#" + idTitle).text(title);
+            $("#" + idMessage).html(message);
+
+            if (flagContactenos) {
+                $("#" + idContactenos).removeClass("no-display");
+            } else {
+                $("#" + idContactenos).addClass("no-display");
+            }
+            $('#' + idModalShow).modal({
+                show: true,
+                backdrop: 'static',
+                keyboard: false
+            });
+        }*/
+
+        function RegisterEventsListenerDeFiltros() {
+            var vIdioma = 'es';
+            $("input:radio[name=rdbTipoOpe]").change(function () {
+                //var browser = AdminPage.getBrowserInfo().toLowerCase();
+                //console.log("el browser es: " + browser);
+                Filtros.changeTipoOpe('/es/mis-busquedas/TipoOpeChange');
+            });
+
+            $("select#cboPais").change(function() {
+                Filtros.changeCboPais('/es/mis-busquedas/CboPaisChange',
+                    '/es/mis-busquedasUS',
+                    vIdioma);
+            });
+
+            $("select#cboPais2").change(function() {
+                Filtros.changeCboPais2('/es/mis-busquedas/CboPais2Change',
+                    '/es/mis-busquedasUS',
+                    vIdioma);
+            });
+
+            $("#btnEliminarFiltros").click(function() {
+                if ($("#lstFiltros option:selected").length > 0) {
+                    Filtros.clickEliminarFiltros('/es/mis-busquedas/EliminarFiltrosClick', 'es');
+                } else {
+                    ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                        "messageTitle",
+                        "Veritrade",
+                        "message",
+                        "Por favor seleccione el(los) filtro(s) a eliminar",
+                        "lnkContactenos",
+                        false);
+                }
+            });
+
+            $("#btnBuscar").click(function() {
+                if ($("#lstFiltros option").length > 0) {
+                    $("#txtDesComercialB").val("");
+                    Busqueda.searchDataByFilters('/es/mis-busquedas/BuscarClick',
+                        'es');
+                } else {
+                    ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                        "messageTitle",
+                        'Búsqueda',
+                        "message",
+                        'Por favor ingrese al menos un filtro antes de dar clic al botón BUSCAR',
+                        "lnkContactenos",
+                        false);
+                }
+
+            });
+
+            $("#btnRestablecer").click(function() {
+                Filtros.restablecer('/es/mis-busquedas/Restablecer_Click', 'es');
+            });
+
+            //$("#cboDesde").change(function() {
+            //    Filtros.onChangeCboDesde(this);
+            //});
+
+            $("#txtDesComercialB").keydown(function(event) {
+                return (event.keyCode != 13);
+            });
+        }
+
+        //Eventos de reporte en excel
+        function RegistrarEventosReporteExcel() {
+            $(document).on('click','.downloadExcel',function() {
+                var vOpcion = $(this).data('opcion');
+                var listaFiltros = [];
+                $("#lstFiltros option").each(function() {
+                    var vThis = $(this);
+                    if (vThis.length) {
+                        listaFiltros.push(vThis.text().trim());
+                    }
+                });
+                var vListaFiltros = listaFiltros.join(" | ");
+                $.ajax({
+                    type: "POST",
+                    url: '/es/mis-busquedas/GetExcelResumen',
+                    data: {
+                        opcion: vOpcion,
+                        tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                        codPais: $("#cboPais").find("option:selected").val(),
+                        textPais: $("#cboPais option:selected").text(),
+                        codPais2: $("#cboPais2").find("option:selected").val(),
+                        fechaIni: Fecha.getYearAndMonth($('#cboDesde').datepicker('getDate')),
+                        fechaFin: Fecha.getYearAndMonth($('#cboHasta').datepicker('getDate')),
+                        filtros: vListaFiltros,
+                        FlagDirecto: "False" != "True"
+                    },
+                    beforeSend: function () {
+                        LoadingAdminPage.showOrHideLoadingPage(true);
+                        
+                    },
+                    success: function (response) {
+                        LoadingAdminPage.showOrHideLoadingPage(false);
+
+                        if (response.objMensajeError == null) {
+
+                            if (response.isFileDownload) {
+                            window.location.href = "/es/mis-busquedas/DownloadExcelResumen/?file=" + response.fileName;
+                            } else {
+                                var ruta ="/es/mis-busquedas/DownloadExcelResumen/?file=" +response.fileName;
+                                var link = '<a id="idDescarga" href = "' + ruta + '" title = "' + response.objMensaje.mensaje +'"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span><a/>';
+                               // console.log(link)
+
+                                ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaDescarga",
+                                    "messageTitleDescarga",
+                                    response.objMensaje.titulo,
+                                    "messageDescarga",
+                                    link,
+                                    "lnkContactenosDescarga",
+                                    response.objMensaje.flagContactenos);
+                            }
+
+                        } else {
+                            ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                                "messageTitle",
+                                response.objMensajeError.titulo,
+                                "message",
+                                response.objMensajeError.mensaje,
+                                "lnkContactenos",
+                                true);
+                        }
+
+
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+        }
+
+        $(document).on("tabsactivate", "#tabsMisBusquedas", function (event, ui) {
+            var wp = ui.newPanel;
+            if ($(wp).prop("id") != "tab-detalle") {
+                setTimeout(applyDot(wp, ($(wp).prop("id") == "tab-productos" ? 2 : 1)), 500);
+            }
+        });
+
+
+        var urlTabs = '/es/mis-busquedas/GetTabsView';
+        var urlCboIndexChanged = '/es/mis-busquedas/CboFiltroSelectedIndexChanged';
+        var urlBtnAddFiltersAndSearch = '/es/mis-busquedas/AgregarFiltrosClick';
+        var urlOrdenarTabla = '/es/mis-busquedas/OrdenarTabla';
+        var urlBtnAddToMyFavourites ='/es/mis-busquedas/AgregarAFavoritosClick';
+        var urlPaging = '/es/mis-busquedas/PageIndexChangingTable';
+        var urlVerSentinel = '/es/mis-busquedas/VerSentinel';
+        var urlIrASentinel = '/es/mis-busquedas/IrASentinel';
+
+        var urlVerRegistros = '/es/mis-busquedas/VerRegistros';
+        var urlPageChangeVerRegistro = '/es/mis-busquedas/VerRegistrosPageIndexChanging';
+        var urlBuscarPorDuaVerRegistro = '/es/mis-busquedas/BuscarPorDuaVerRegistros';
+        var urlBuscarPorDesComercialVerRegistro = '/es/mis-busquedas/BuscarPorDesComercialVerRegistro';
+
+        var urlVerMarcas = '/es/mis-busquedas/VerMarcas';
+        var urlVerInfo = '/es/mis-busquedas/VerInfoComplementario';
+        var urlDetalleExcel = '/es/mis-busquedas/VerDetalleExcel';
+        var urlVerInfoTablas = '/es/mis-busquedas/VerInfoTabla';
+        var urlDetalleExcelId = '/es/mis-busquedas/VerDetalleExcelById';
+        var urlPagingMarcaModelo = '/es/mis-busquedas/ChangePageTableMarcaModelo';
+        var urlPagingDetalleExcel = '/es/mis-busquedas/ChangePageTableDetalleExcel';
+
+        var tipoFiltroResumen = 'Resumen';
+        var tipoFiltroTab = 'Tab';
+        var vIdioma = 'es';
+
+        var cargoEventoReporteExcel = 0;
+
+        function CargarDatosDeTablas(data, recordsFound, hideTabExcel, FlagRegMax) {
+            //console.log(FlagRegMax);
+            $("#content_tabs").load(urlTabs,
+                {
+                    tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                    codPais2: $("#cboPais2").find("option:selected").val(),
+                    codPais: $("#cboPais").find("option:selected").val(),
+                    hideTabExcel: hideTabExcel,
+                    FlagRegMax: FlagRegMax
+                },
+                function () {
+                    $("#divRegisterFound").removeClass("no-display");
+                    $("#totalRecordsFound").text(recordsFound);
+                    $("#tabsMisBusquedas").tabs();
+
+                    Highcharts.setOptions(dbThemes[0].value);
+                    gLangOptionHighcharts = {
+                        exportMenuButtonTitle: 'Opciones para exportar',
+                        downloadPNG: 'Exportar a PNG',
+                        downloadPDF: 'Exportar a PDF',
+                        printChart: 'Imprimir gr&#225;fico'
+                    };
+
+                    // JANAQ 200720
+                    gOptionGrafico = {
+                        downloadPNG: 'Exportar a PNG',
+                        printChart: 'Imprimir gráfico'
+                    };
+
+                    Highcharts.setOptions({
+                        colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+                            return {
+                                radialGradient: {
+                                    cx: 0.5,
+                                    cy: 0.3,
+                                    r: 0.7
+                                },
+                                stops: [
+                                    [0, color],
+                                    [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                                ]
+                            };
+                        }),
+                        lang: gLangOptionHighcharts
+                    });
+
+                    gArrayPiesData = [];
+                    gArrayChartData = []; //clear variable chartData
+
+                    $.each(data, function (i, item) {
+
+                        //console.log(tipoFiltroResumen + item.tabDataName)
+                        $("#grid" + tipoFiltroResumen + item.tabDataName).html("");
+                        if (item.tabDataNumRows > 0) {
+                            if (item.resumenTotalPages > 0) {
+                                $("#grid" + tipoFiltroResumen + item.tabDataName).html(item.resumenTabDataList);
+                            }
+
+                            if (item.resumenTotalPages > 1) {
+                                TablaDeDatos.OnPageClick(item.tabDataName,
+                                    tipoFiltroResumen,
+                                    urlPaging,
+                                    urlVerRegistros,
+                                    urlPageChangeVerRegistro,
+                                    urlBuscarPorDuaVerRegistro,
+                                    urlBuscarPorDesComercialVerRegistro,
+                                    urlVerSentinel,
+                                    urlIrASentinel,
+                                    item.resumenTotalPages,
+                                    5);
+                            } else {
+                                $('#paging' + tipoFiltroResumen + item.tabDataName).html("<li class=\"page-item active\"><a href=\"javascript:void(0)\" class=\"page-link\">1</a></li>");
+                            }
+
+                            $("#grid" + item.tabDataName).html("");
+                            $("#grid" + item.tabDataName).html(item.tabDataList);
+
+
+                            if (item.tabTotalPages > 1) {
+                                TablaDeDatos.OnPageClick(item.tabDataName,
+                                    tipoFiltroTab,
+                                    urlPaging,
+                                    urlVerRegistros,
+                                    urlPageChangeVerRegistro,
+                                    urlBuscarPorDuaVerRegistro,
+                                    urlBuscarPorDesComercialVerRegistro,
+                                    urlVerSentinel,
+                                    urlIrASentinel,
+                                    item.tabTotalPages, 5);
+                            } else {
+                                $('#paging' + tipoFiltroTab + item.tabDataName).html("<li class=\"page-item active\"><a href=\"javascript:void(0)\" class=\"page-link\">1</a></li>");
+                            }
+
+                            if (item.tabPieData != null) {
+                                Chart.LoadCboThemes("themesChart" + item.tabDataName);
+
+                                $('#themesChart'+ item.tabDataName ).colorselector();
+                                PieAdmin.loadData("pieChart" + item.tabDataName,
+                                    item.pieTitle,
+                                    item.tabPieData,
+                                    urlVerRegistros,
+                                    urlPageChangeVerRegistro,
+                                    urlBuscarPorDuaVerRegistro,
+                                    urlBuscarPorDesComercialVerRegistro,
+                                    item.tabDataName);
+
+                                var auxDataPie = {};
+
+                                auxDataPie.filtro = item.tabDataName;
+                                auxDataPie.value = item.tabPieData;
+
+                                gArrayPiesData.push(auxDataPie);
+                                gArrayChartData.push(auxDataPie);
+
+                                //Chart.ChangeThemeTypeColumn('#themesChart' + item.tabDataName,
+                                //    urlRegistrosByChartSeriesPoint,
+                                //    urlVerRegistrosPaging,
+                                //    objMyProducts.CountVisiblePages,
+                                //    urlBuscarPorDesComercial);
+
+                            }
+                            if (FlagRegMax) {
+                                var wp = $("#grid" + item.tabDataName);
+                                setTimeout(applyDot(wp, item.tabDataName === 'Partida' ? 2 : 1), 500);
+                            }
+                            else {
+                                var wp = $("#grid" + tipoFiltroResumen + item.tabDataName);
+                                setTimeout(applyDot(wp), 500);
+                            }
+                        }
+                    });
+
+
+
+                    TablaDeDatos.CboFiltroIndexChanged(urlCboIndexChanged, vIdioma);
+                    TablaDeDatos.ButtonAgregarFiltrosClick(urlBtnAddFiltersAndSearch, vIdioma);
+                    TablaDeDatos.lnkOrdenarTablaClick(urlOrdenarTabla,
+                        urlVerRegistros,
+                        urlPageChangeVerRegistro,
+                        urlBuscarPorDuaVerRegistro,
+                        urlBuscarPorDesComercialVerRegistro,
+                        urlVerSentinel, urlIrASentinel);
+                    TablaDeDatos.ButtonAgregarAFavoritosClick(urlBtnAddToMyFavourites, vIdioma);
+
+                    VerRegistro.lnkVerRegistroClick(urlVerRegistros,
+                        urlPageChangeVerRegistro,
+                        urlBuscarPorDuaVerRegistro,
+                        urlBuscarPorDesComercialVerRegistro,"");
+
+                    Busqueda.verInfoComplementario(urlVerInfo,
+                        tipoFiltroTab,
+                        urlOrdenarTabla,
+                        urlPaging,
+                        urlVerRegistros,
+                        urlPageChangeVerRegistro,
+                        urlBuscarPorDuaVerRegistro,
+                        urlBuscarPorDesComercialVerRegistro, hideTabExcel, FlagRegMax
+                        );
+
+                    Busqueda.verMarcas(urlVerMarcas,
+                        tipoFiltroTab,
+                        urlOrdenarTabla,
+                        urlPagingMarcaModelo,
+                        urlVerRegistros,
+                        urlPageChangeVerRegistro,
+                        urlBuscarPorDuaVerRegistro,
+                        urlBuscarPorDesComercialVerRegistro, hideTabExcel, FlagRegMax);
+                    Busqueda.verDetalleExcel(urlDetalleExcel,
+                        tipoFiltroTab,
+                        urlOrdenarTabla,
+                        urlPagingDetalleExcel,
+                        urlVerRegistros,
+                        urlPageChangeVerRegistro,
+                        urlBuscarPorDuaVerRegistro,
+                        urlBuscarPorDesComercialVerRegistro,
+                        urlVerSentinel,
+                        urlIrASentinel, urlDetalleExcelId);
+                    //Busqueda.extraFiltroDetalleExcel(urlDetalleExcel,
+                    //    tipoFiltroTab,
+                    //    urlOrdenarTabla,
+                    //    urlPagingDetalleExcel,
+                    //    urlVerRegistros,
+                    //    urlPageChangeVerRegistro,
+                    //    urlBuscarPorDuaVerRegistro,
+                    //    urlBuscarPorDesComercialVerRegistro,
+                    //    urlVerSentinel,
+                    //    urlIrASentinel, urlDetalleExcelId);
+
+
+                    TablaDeDatos.ClickColumnLnkSentinel(urlVerSentinel, urlIrASentinel);
+                    if (cargoEventoReporteExcel == 0) {
+
+                        RegistrarEventosReporteExcel();
+                        cargoEventoReporteExcel = 1;
+                    }
+                    PieAdmin.changeCboThemes( urlVerRegistros,
+                        urlPageChangeVerRegistro,
+                        urlBuscarPorDuaVerRegistro,
+                        urlBuscarPorDesComercialVerRegistro);
+
+                    Busqueda.scrollToHere();
+                    LoadingAdminPage.showOrHideLoadingPage(false);
+                });
+        }
+
+        $(document).on("change", "select#cboPaisB", function (event, ui) {
+            Filtros.changeCboPaisB('/es/mis-busquedas/CboPaisBChange');
+        });
+
+        $(document).on("click", "#btnAgregarDesComercial", function (event, ui) {
+            var vTxtDesComercialB = $("#txtDesComercialB").val();
+            var palabras = vTxtDesComercialB.split(" ");
+            var cont = 0;
+            for (var i = 0; i < palabras.length; i++) {
+                if (palabras[i].length > 2) {
+                    cont++;
+                }
+            }
+            if (cont == 0) {
+                $("#txtDesComercialB").val("");
+                ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                    "messageTitle",
+                    "Veritrade",
+                    "message",
+                    'Debe ingresar al menos una palabra de 3 letras',
+                    "lnkContactenos",
+                    false);
+            }
+            else {
+                Filtros.clickAgregarDesComercial('/es/mis-busquedas/AgregarDesComercialClick','es');
+            }
+        });
+
+        $(document).on("click", "#btnMisPartidas", function (event, ui) {
+             MisFavoritos.showMyFovourites('Mis Productos',
+                    'Partida',
+                    '/es/mis-busquedas/CargarFavoritos',
+                    'es',
+                    'Seleccione');
+        });
+
+        $(document).on("click", "#bntMisImportadores", function (event, ui) {
+             MisFavoritos.showMyFovourites('Mis Importadores',
+                    'Importador',
+                    '/es/mis-busquedas/CargarFavoritos',
+                    'es',
+                    'Seleccione');
+        });
+
+        $(document).on("click", "#btnMisProveedores", function (event, ui) {
+             MisFavoritos.showMyFovourites($(this).attr("data-favoritosModalTitle"),
+                    'Proveedor',
+                    '/es/mis-busquedas/CargarFavoritos',
+                    'es',
+                    'Seleccione');
+        });
+
+        $(document).on("click", "#btnMisExportadores", function (event, ui) {
+             MisFavoritos.showMyFovourites('Mis Exportadores',
+                    'Exportador',
+                    '/es/mis-busquedas/CargarFavoritos',
+                    'es',
+                    'Seleccione');
+        });
+
+        $(document).on("click", "#btnImportadoresExp", function (event, ui) {
+             MisFavoritos.showMyFovourites('Mis Importadores',
+                    'ImportadorExp',
+                    '/es/mis-busquedas/CargarFavoritos',
+                    'es',
+                    'Seleccione');
+        });
+
+         $(document).on("click", "#btnImportadoresExp", function (event, ui) {
+             MisFavoritos.showMyFovourites('Mis Importadores',
+                    'ImportadorExp',
+                    '/es/mis-busquedas/CargarFavoritos',
+                    'es',
+                    'Seleccione');
+        });
+
+        $(document).on("change", "#cboFavoritosF", function (event, ui) {
+            $.ajax({
+                type: "POST",
+                url: '/es/mis-busquedas/cboFavoritosF_SelectedIndexChanged',
+                data: {
+                    cboFavoritosFDataText: $(this).find("option:selected").text(),
+                    cboFavoritosFDataValue: $(this).find("option:selected").val(),
+                    idioma: 'es',
+                    tipoOpe: $('input:radio[name=rdbTipoOpe]:checked').val(),
+                    numFiltrosExistentes: $("#lstFiltros option").length
+                },
+                beforeSend: function () {
+                    LoadingAdminPage.showOrHideLoadingPage(true);
+                },
+                success: function (response) {
+
+                    if (response.objMensaje != null) {
+                        ModalAdmin.showVentanaMensajeWithTitleAndMessage("ModalVentanaMensaje",
+                            "messageTitle",
+                            response.objMensaje.titulo,
+                            "message",
+                            response.objMensaje.mensaje,
+                            "lnkContactenos",
+                            response.objMensaje.flagContactenos);
+                    } else {
+                        if (response.nuevoFiltro) {
+                            Filtros.addFilterToFiltersList(response.newItems);
+                        }
+                        Filtros.disableAndHideFiltersFieldsByMyGroups(response.desabilitarControles);
+
+                        if (response.maximoLimiteFiltros) {
+                            Filtros.setVisibleFilltrosDeAgregar(!response.maximoLimiteFiltros);
+                        }
+                    }
+
+                    LoadingAdminPage.showOrHideLoadingPage(false);
+                    ModalAdmin.hide("ModalFavoritos");
+                },
+                error: function (dataError) {
+                    console.info(dataError);
+                }
+            });
+        });
+
+        
+
+        function initAutocompleteFiltros() {
+            Filtros.txtNandinaBautocompleteListener('/es/mis-busquedas/BuscarPartidas',
+                '/es/mis-busquedas/AgregarPartida');
+
+            Filtros.txtImportadorBautocompleteListener('/es/mis-busquedas/BuscarImportadorB',
+                '/es/mis-busquedas/AgregaImportador');
+
+            Filtros.txtProveedorBautocompleteListener('/es/mis-busquedas/BuscarProveedorB',
+                '/es/mis-busquedas/AgregaProveedor');
+
+            Filtros.txtExportadorBautocompleteListener('/es/mis-busquedas/BuscarImportadorB',
+                '/es/mis-busquedas/AgregaExportador');
+
+            Filtros.txtImportadorExpBautocompleteListener('/es/mis-busquedas/BuscarProveedorB',
+                '/es/mis-busquedas/AgregaImportadorExp');
+        }
+
+        // JANAQ 060620
+        // Funcion que inicializa eventos de controles autocomplete mixpanel
+        function initAutoCompleteFiltrosMixPanel() {
+            //Si se ingreso por url de referido (validacion para evitar trackear enlaces de universidades)
+            if (getCookie("VLU") == "1") return;
+
+            MixPanel.filtroPartidaAduanera();
+            MixPanel.filtroImportador();
+            MixPanel.filtroExportador();
+            MixPanel.filtroMarcaExportador();
+            MixPanel.filtroLista();
+        }
+
+        function RegisterEventsListenerAgregarFavoritos() {
+            $("#btnAgregarAFav").click(function() {
+                AgregarFavoritos.agregarAFavClick('/es/mis-busquedas/AgregarAFavClick',
+                    'Por favor seleccione al menos alguna opción',
+                    'Ingrese el Nuevo Grupo',
+                    'es');
+            });
+
+            AgregarFavoritos.chkCrearGrupoChange();
+            AgregarFavoritos.chkAgregarAGrupoChange();
+            $("#CancelarFav").click(function() {
+                ModalAdmin.hide("ModalAgregarFavoritos");
+            });
+        }
+
+        function ValidarSeleccionCheck(pId, pIdTbody) {
+            if (!$("#" + pId).is(':checked'))
+                return true;
+
+            var vChekAllResumen = "chkAll"+'Resumen';
+            var vTbodyResumen = "tbody" + 'Resumen';
+            var vTbodyTab = "tbody" + 'Tab';
+            var vCheckAllTab = "chkAll"+  'Tab';
+            var vTbodyCheck = "tbody" + pIdTbody;
+            var vCheckAll = "chkAll" + pIdTbody;
+
+            var lFiltros = 'Partida,Marca,Modelo,Importador,Proveedor,Exportador,ImportadorExp,PaisOrigen,PaisDestino,MarcaEC,ViaTransp,AduanaDUA,Aduana,Distrito,DUA,Embarcador,Notificado,PaisEmbarque,PtoEmbarque,PtoDestino,PtoDescarga,Manifiesto,NewTab,InfoTabla';
+            var arrayFiltros = lFiltros.split(",");
+
+            for (var i = 0; i < arrayFiltros.length; i++) {
+                if (vChekAllResumen + arrayFiltros[i] != vCheckAll) {
+                    $("#" + vChekAllResumen + arrayFiltros[i]).prop('checked', false);
+                }
+
+                if (vTbodyResumen + arrayFiltros[i] != vTbodyCheck) {
+                    $("#" + vTbodyResumen + arrayFiltros[i] + " tr>td input").each(function () {
+                        $(this).prop('checked', false);
+                    });
+                }
+
+                if (vCheckAllTab + arrayFiltros[i] != vCheckAll) {
+                    $("#" + vCheckAllTab + arrayFiltros[i]).prop('checked', false);
+                }
+
+                if (vTbodyTab + arrayFiltros[i] != vTbodyCheck) {
+                    $("#" + vTbodyTab + arrayFiltros[i] + " tr>td input").each(function () {
+                        $(this).prop('checked', false);
+                    });
+                }
+            }
+            return true;
+        }
+
+</script>
+
+
+    <!--JANAQ 040620-->
+    <!--SDK MIX PANEL-->
+    <script>
+        $(document).ready(function () {
+             //(validacion para evitar trackear enlaces de universidades y DEMO)
+            if (getCookie("VLU") != "1" && getCookie("IsDemo") != "1") {
+                (function (c, a) {
+                    if (!a.__SV) {
+                        var b = window; try { var d, m, j, k = b.location, f = k.hash; d = function (a, b) { return (m = a.match(RegExp(b + "=([^&]*)"))) ? m[1] : null }; f && d(f, "state") && (j = JSON.parse(decodeURIComponent(d(f, "state"))), "mpeditor" === j.action && (b.sessionStorage.setItem("_mpcehash", f), history.replaceState(j.desiredHash || "", c.title, k.pathname + k.search))) } catch (n) { } var l, h; window.mixpanel = a; a._i = []; a.init = function (b, d, g) {
+                            function c(b, i) {
+                                var a = i.split("."); 2 == a.length && (b = b[a[0]], i = a[1]); b[i] = function () {
+                                    b.push([i].concat(Array.prototype.slice.call(arguments,
+                                        0)))
+                                }
+                            } var e = a; "undefined" !== typeof g ? e = a[g] = [] : g = "mixpanel"; e.people = e.people || []; e.toString = function (b) { var a = "mixpanel"; "mixpanel" !== g && (a += "." + g); b || (a += " (stub)"); return a }; e.people.toString = function () { return e.toString(1) + ".people (stub)" }; l = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+                            for (h = 0; h < l.length; h++)c(e, l[h]); var f = "set set_once union unset remove delete".split(" "); e.get_group = function () { function a(c) { b[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); e.push([d, call2]) } } for (var b = {}, d = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < f.length; c++)a(f[c]); return b }; a._i.push([b, d, g])
+                        }; a.__SV = 1.2; b = c.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
+                            MIXPANEL_CUSTOM_LIB_URL : "file:" === c.location.protocol && "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js"; d = c.getElementsByTagName("script")[0]; d.parentNode.insertBefore(b, d)
+                    }
+                })(document, window.mixpanel || []);
+                var productionHost = 'business2.veritradecorp.com';
+                var devToken = '053aecdbb1d7f21263deb0c139374723';
+                var prodToken = '24afa81fa167622c3b101ea05504ec68';
+
+                //Si el hostname es diferente a produccion se usara el token de desarrollo 
+                if (window.location.hostname.toLowerCase().search(productionHost) < 0) {
+                    mixpanel.init(devToken, { batch_requests: true });
+                } else {
+                    mixpanel.init(prodToken, { batch_requests: true });
+                }
+
+                // Identificando al usuario Mix Panel
+                var USER_ID = "333872";
+                mixpanel.identify(USER_ID);
+            }
+        });
+
+
+    </script>
+
+    <script src="/Scripts/MixPanel/MenuPrincipalMP.js?1" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#idioma").click(function () {
+                $("#form-language").submit();
+            });
+            if ($('#toggleAlert').length) {
+
+                function toggleAlertSend(urlPost) {
+                    console.log(urlPost);
+                    $.ajax({
+                        type: "POST",
+                        url: urlPost,
+                        beforeSend: function () {
+                            LoadingAdminPage.showOrHideLoadingPage(true);
+                        },
+                        success: function (response) {
+                            if (response === 'True') {
+                                console.log('Habilitar Alertas')
+                                $('#toggleAlert').html('Habilitar Alertas');
+                            } else {
+                                console.log('Deshabilitar Alertas')
+                                $('#toggleAlert').html('Deshabilitar Alertas');
+
+                            }
+                            LoadingAdminPage.showOrHideLoadingPage(false);
+                        }
+                    });
+                }
+                $('#toggleAlert').click(function () {
+                    toggleAlertSend('/es/mis-alertas-favoritos/ToggleAlertSend');
+
+                });
+
+            }
+        });
+    </script>
+</body>
+</html>
