@@ -1,0 +1,110 @@
+    ------------------------------4------------------------------
+    #afinitor 10 mg  30 comprimidos (everolimus)
+    expresion_1 = '\d+\.?\d*\s*mg\s*\d{1,3}\s*(tabletas|capsulas|comprimidos|solucion inyectable|solucion oral)'
+
+    #giotrif 30mg (afatinib) 30 tabletas (medicamento de uso humano)
+    expresion_1_1 = '\d+\.?\d*\s*mg.{0,20}\d{1,4}\s*(tabletas|capsulas|comprimidos|solucion inyectable|solucion oral)' #menos exacta que la expresion_1
+    
+    #prycel (dasatinib) frasco con  60 tabletas de 70 mg (medicamento de uso humano)
+    expresion_2 = '\d{1,3}\s*(tabletas|capsulas|comprimidos|solucion inyectable|solucion oral).{0,5}\d+\.?\d*\s*mg'
+    ------------------------------3------------------------------
+    #tarceva 100 mg comprimidos  (erlotinib)
+    expresion_3 = '\d+\.?\d*\s*mg\s*(tabletas|capsulas|comprimidos|solucion inyectable|solucion oral)'
+
+    #avastin  100 mg/4 ml solucion inyectable (bevacizumab)
+    expresion_soluciones = '\d+\.?\d*\s*mg.{0,30}\s*(solucion inyectable|solucion oral)'
+
+    #mvasi (bevacizumab) ampula con 100 mg/ 4.0 ml (medicamento de uso humano)
+    expresion_4 = '(frasco ampula|vial|ampula|jeringa)\s*.{0,5}\d+\s*mg'
+
+    #kadcyla 100mg frasco ampula (trastuzumab emtansina)
+    expresion_6 = '\d+\.?\d*\s*mg\s*(frasco ampula|vial|ampula|jeringa)'
+
+    -----------------------------------2---------------------------------
+    #kyprolis 60mg (carfilzomib) (medicamento de uso humano)
+    expresion_5 = '\d+\.?\d*\s*mg'
+
+                   
+                   
+                    NUEVAS                                  
+------------------------------4------------------------------
+\d+\.?\d*\s*viales\s*.{0,5}\d+\.?\d*\s*(gramos|mg) #nueva para viales(plural y en 4 no toma en cuenta ni viales ni frascos ni ampulas)
+everolimus (3 viales con 0.2 gramos cada uno)
+
+\d{1,3}\s*(tabletas|capsulas|comprimidos|solucion inyectable|solucion oral).{0,15}\d+\.?\d*\s*mg   #igual a expresion2 pero con mayor margen
+medicamento ( brigatinib alunbrig) frasco con 30 tabletas cada uno de 180 mg viables
+medicamento ( brigatinib alunbrig) frasco con 30 tabletas cada uno de 180 mg viables
+cajas con frascos de medicamento alunbrig (brigatinib) 30 tabletas cada frasco de 180 mg
+
+tabletas.{0,5}\d+\.?\d*\smg.{0,5}\d+  #Nueva
+fexilev (gefitinib tabletas de 250 mg con 30 
+
+\d+\.?\d*\s*mg.{0,40}\d{1,4}\s*(tabletas|capsulas|comprimidos|solucion inyectable|solucion oral) #igual a expresion1_1 pero con mayor margen
+lenvixi 4mg (lenvatinib caja con 30 capsulas)
+medicamento ( brigatinib 180 mg caja con tabletas cada una con 28 tabletas )
+medicamentos (alectinib 150mg [alecensa]en caja con blister de 56 capsulas)
+medicamentos (caprelsa 300mg [vandetanib]caja con 30 tabletas recubiertas de pelicula).
+lenvixi 10mg (lenvatinib caja con 30 capsulas) 
+muestras de medicamento (brigatinib 180mg) frasco con 30 comprimido recubierto.
+
+
+\d+\.?\d*\s*mg\s*\d{1,3}\s*(tabletas|tab|capsulas|comprimidos|solucion inyectable|solucion oral) # igual a expresion_1 pero con tab en ff
+verzenio (abemaciclib) 50 mg 56 tab
+verzenio (abemaciclib) 150 mg 56 tab 
+
+caja con frasco de 30 tabletas de medicamento (alunbrig) 180 mg
+cajas con frascos de medicamento alunbrig (brigatinib) 30 tabletas cada frasco de 180 mg
+medicamentos (neratinib (hernix 40mg) caja con 180 tableta de 40 mg).
+medicamento inlyta (axtinib) frasco con 60 tablets de 5mg
+
+----------------3---------------------
+(1|un|una)*\s*(capsu|capsula|tabletas).{0,5}\d+\.?\d*\s*mg #parecida a expresion_4
+ninlaro (ixazomib) caja colectiva con 3 cajas con una capsula de 2.3 mg (medicamento de uso humano)
+ninlaro (ixazomib) caja colectiva con 3 cajas con una capsula de 3 mg (medicamento de uso humano)
+ninlaro (ixazomib) caja colectiva con 3 cajas con una capsula de 4 mg (medicamento de uso humano)
+ninlaro (ixazomib) caja colectiva con 3 cajas con una capsula de 2.3 mg (medicamento de uso humano)
+alunbrig ( brigatinib ) tabletas de 180 mg
+vargatef, capsu/120/100mg ss mex (medicamentos dosificado de uso humano)
+
+
+\d+\.?\d*\s*mg\)*capsulas
+medicamento de uso humano vitrakvi (larotrectinib 100mg)capsulas
+
+(frasco ampula|vial|ampula|jeringa)\s*.{0,5}\d+\.?\d*\s*mg #igual a expresion_4 pero acenpta decimal en unidad de concentracion
+medicamento exfucikanet(bortezomib)caja de carton con 1 frasco ampula con 3.5 mg de polvo liofilizado
+bizmi (bortezomib) caja de carton con un frasco ampula con 3.5 mg
+
+expresion_3 = '\d+\.?\d*\s*mg\s*(tabletas|tablet|capsulas|comprimidos|solucion inyectable|solucion oral)'
+brigatinib 180 mg tablet (alunbrig)
+bottle cont 60 ct. bay 2757556 (larotrectinib) 100mg capsule labeled
+medicamentos (rozlytrek 200mg {entrectinib 200mg} en capsula con 90cajas)
+
+expresion_6 = \d+\.?\d*\s*mg.{0,8}(frasco ampula|vial|ampula|jeringa)
+kadcyla 100mg frasco ampula (trastuzumab emtansina)
+perjeta 30 mg/ml  frasco ampula  (pertuzumab)
+darzalex 400mg/20 ml frasco ampula (daratumumab)
+herceptin sc 600 mg/5 ml frasco ampula (traztuzumab)
+imfinzio 120 mg/ 2.4 ml frasco ampula (durvalumab)
+mabthera, 500 mg / 50 ml frasco ampula (rituximab)
+
+
+expresion_4 = '(frasco ampula|vial|ampula|jeringa)\s*.{0,15}\d+\.?\d*\s*mg'
+yervoy (ipilimumab) caja con frasco ampula 10 ml  (50 mg / 10 ml) (medicamento de uso humano)
+mvasi (bevacizumab) ampula con 100 mg/ 4.0 ml (medicamento de uso humano)
+
+---------------2---------------------
+expresion_5 = '\d+\.?\d*\s*mg' # YA EXISTE
+iressa 250 mg (gefitinib)(3 x 10)
+
+\d+\s*(tabletas|tab|capsulas|capsula|comprimidos|solucion inyectable|solucion oral|vial) # nueva
+vial solucion estabilizadora iv para blinatumomab caja con 12 viales
+
+--------------1------------------------
+(tabletas|tab|capsulas|capsula|comprimidos|solucion inyectable|solucion oral|vial) #nueva, solo para ff
+alunbrig ( brigatinib ) tableta
+brigatinib (alunbring)(taqbletas)
+durvalumab (imfinzi) (f.f. solucion inyectable)
+ 
+
+ ERROR toma  2992 tabletas
+ afatinib 30 mg (bibw 2992) 30 tabletas (medicamento de uso humano)

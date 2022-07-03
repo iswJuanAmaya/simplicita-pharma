@@ -1,38 +1,84 @@
 1 match 3 coincidencias
     -224capsulas150mg -> 3 coincidencias en 1 matches: 224tabletas150mg
     diferencia en ff:
-        forzamos a ff de medicamentos¿?
+        forzamos a ff de medicamentos
 
     -tabletas250mg ->3 coincidencias en 1 matches: 30tabletas250mg
-    diferencia en sp:
+    x)diferencia en sp:
         comparar precio con otros
-            si esta parecido tomar presentacion de medicamentos
-        si no:
-            generar alerta para revisión manual
+            si esta parecido
+                tomar presentacion de medicamentos
+            si no:
+                generar alerta para revisión manual
 
     -60tabletas30mg -> 3 coincidencias en 1 matches: 30tabletas30mg
     diferencia en presentacion:
         que defina el EF
 
-    -#60tabletas70mg -> 3 coincidencias en 1 matches: 60tabletas50mg
-    diferencia en concentracion:    
+    -60tabletas70mg -> 3 coincidencias en 1 matches: 60tabletas50mg
+    diferencia en concentracion:        
         para mi necesitamos crear una nueva presentacion pero que defina el EF
 
 3 matches 3 coincidencias
     -60tabletas10mg -> 3 coincidencias en 3 matches: 60tabletas5mg || 60tabletas15mg || 60tabletas20mg
+    diferencia en concentracion:    
+        para mi necesitamos crear una nueva presentacion pero que defina el EF
 
+x2 matches 1 coincidencia
+    -spcapsulas150mg ->1 coincidencias en 2 matches: 112comprimidos200mg || 120comprimidos200mg
+    menos de 2 coincidencias:
+        generar alerta para revisión manual
+        -> generar csv para que revisen
 
+2 matches 2 coincidencias 
+    -sp capsulas200mg -> 2 coincidencias en 2 matches: 112comprimidos200mg || 120comprimidos200mg	
+    dos diferencias en pp y ff:
+        esto es una combinación entre sp ff y, cuando definamos ambos arriba podemos definir mejor este
+    dos diferencias en sp y ff
+        comparar precio con otros
+            si esta parecido
+                tomar presentacion de medicamentos
+            xsi no:
+                generar alerta para revisión manual
 
-
-
-
-
-2 matches 1 coincidencia 
-    spcapsulas150mg ->1 coincidencias en 2 matches: 112comprimidos200mg || 120comprimidos200mg
-2 matches 2 coincidencias
-    spcapsulas200mg -> 2 coincidencias en 2 matches: 112comprimidos200mg || 120comprimidos200mg	
 2 matches  3 coincidencias
-    30tabletas20mg 3 coincidencias en 2 matches: 30tabletas40mg || 30tabletas30mg
+    -30tabletas20mg 3 coincidencias en 2 matches: 30tabletas40mg || 30tabletas30mg
+    diferencia unica en concentracion:
+        para mi necesitamos crear una nueva presentacion pero que defina el EF
+
+-------------------------------------
+to do
+-------------------------------------
+generar nueva presentacion en medicamentos e indicar cantidad de 
 
 
-mabthera, 100 mg / 10 ml solucion inyectable (rituximab)
+-------------------------
+Formas farmacologicas ff
+-------------------------
+
+224	capsulas	150	mg						3 coincidencias en 1 matches: 224tabletas150mg		tabletas || capsulas
+28	capsulas	12.5	mg						3 coincidencias en 1 matches: 28tabletas12.5mg		tabletas || capsulas
+90	capsulas	140	mg						3 coincidencias en 1 matches: 90tabletas140mg		tabletas || capsulas
+120	capsulas	140	mg						3 coincidencias en 1 matches: 120tabletas140mg		tabletas || capsulas
+
+
+1	vial	3.5	mg						3 coincidencias en 1 matches: 1solucion inyectable3.5mg		solucion inyectable || vial
+1	vial	3.5	mg						3 coincidencias en 1 matches: 1solucion inyectable3.5mg		solucion inyectable || vial
+1	vial	350	mg						3 coincidencias en 1 matches: 1solucion inyectable350mg		solucion inyectable || vial
+
+
+
+1	frasco ampula	3.5	mg						3 coincidencias en 1 matches: 1solucion inyectable3.5mg		solucion inyectable || frasco ampula	
+1	frasco ampula	440	mg						3 coincidencias en 1 matches: 1solucion inyectable440mg		solucion inyectable || frasco ampula
+1	frasco ampula	50	mg						3 coincidencias en 1 matches: 1solucion inyectable50mg		solucion inyectable || frasco ampula
+
+
+1	ampula	60	mg						3 coincidencias en 1 matches: 1solucion inyectable60mg		solucion inyectable || ampula	
+1	ampula	60	mg						3 coincidencias en 1 matches: 1solucion inyectable60mg		solucion inyectable || ampula
+
+180	tabletas	40	mg						3 coincidencias en 1 matches: 180comprimidos40mg		comprimidos || tabletas
+180	tabletas	40	mg						3 coincidencias en 1 matches: 180comprimidos40mg		comprimidos || tabletas
+30	tabletas	150	mg						3 coincidencias en 1 matches: 30comprimidos150mg		comprimidos || tabletas
+
+1	jeringa	100	mg						3 coincidencias en 1 matches: 1solucion inyectable100mg		solucion inyectable || jeringa
+1	jeringa	100	mg						3 coincidencias en 1 matches: 1solucion inyectable100mg		solucion inyectable || jeringa

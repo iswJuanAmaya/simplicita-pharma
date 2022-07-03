@@ -1,0 +1,57 @@
+perfect match                                                                                                                         547
+forzed perfect match                                                                                                                  329
+
+#iressa 250 mg (gefitinib)(3 x 10)
+2 coincidencias en 1 matches: sp|sff                                                                                                  111
+
+#lynparza 50 mg capsulas (olaparib)
+3 coincidencias en 1 matches: sp                                                                                                       60
+
+#alunbrig (brigatinib) tableta
+1 coincidencias en 8 matches: sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp     55
+
+#medicamento sutent 28 (sunitinib) caja de carton con 28 capsulas de 50 mg en frasco etiquetado e instructivo anexo.
+2 coincidencias en 1 matches: cc|ff                                                                                                    33
+
+#kisqali tabletas (ribociclib)
+0 coincidencias en 0 matches:                                                                                                          31
+
+#tasigna 200 mg capsulas (nilotinib)
+2 coincidencias en 3 matches: sp|ff || sp|ff || sp|ff                                                                                  29
+
+#ninlaro (ixazomib) caja colectiva con 3 cajas con una capsula de 2.3 mg (medicamento de uso humano)
+3 coincidencias en 1 matches: pp                                                                                                       21
+
+#ct-p16 o avastin aprobado en la eu (bevacizumab) 25mg/ml (medicamento)
+1 coincidencias en 2 matches: cc|sp|sff || cc|sp|sff                                                                                   13
+
+#caprelsa (vandetanib) 300 mg (medicamento de  uso humano  )
+1 coincidencias en 1 matches: cc|sp|sff                                                                                                11
+
+#iclusig (ponatinib)(tableta)
+1 coincidencias en 1 matches: sc|suc|sp                                                                                                 8
+
+#acp-196 calquence 100 mg  30 capsulas (acalabrutinib)
+2 coincidencias en 1 matches: pp|ff                                                                                                     8
+
+#braftovi (encorafenib) braftovi 50mg 28ge
+2 coincidencias en 2 matches: sp|sff || sp|sff                                                                                          8
+
+#blincyto (blinatumomab ) ampula de vidrio tipo i con 35 mg (medicamento de uso humano)
+1 coincidencias en 1 matches: uc|sp|sff                                                                                                 5
+
+#verzenio (abemaciclib) 200 mg 28 tab
+2 coincidencias en 3 matches: cc|pp || cc|pp || cc|pp                                                                                   5
+
+#lynparza (olaparib) (f f tableta)
+1 coincidencias en 2 matches: sc|suc|sp || sc|suc|sp                                                                                    3
+
+#brigatinib 180 mg tablet (alunbrig)
+3 coincidencias en 2 matches: sp || sp                                                                                                  2
+
+#medicamentos (polivy (polatuzumab) caja con 1 vial de 140mg
+2 coincidencias en 2 matches: cc|ff || cc|ff                                                                                            2
+
+#medicamento inlyta (axitinib) frasco con 60 tabletas de 1 mg
+3 coincidencias en 2 matches: pp || cc                                                                                                  1
+

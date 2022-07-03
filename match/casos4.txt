@@ -1,0 +1,60 @@
+->Funcion de match por precios basado en perfect_match_vn.csv  ->281
+
+-sp *completar presentacion por precio unitario, si precio se aleja alerta para ER o nuevo medicamento ->202
+#iressa 250 mg (gefitinib)(3 x 10) 111
+2 coincidencias en 1 matches: sp|sff
+
+#tasigna 200 mg capsulas (nilotinib) 29
+2 coincidencias en 3 matches: sp|ff || sp|ff || sp|ff 
+
+#lynparza 50 mg capsulas (olaparib) 60
+3 coincidencias en 1 matches: sp
+
+#brigatinib 180 mg tablet (alunbrig) 2
+3 coincidencias en 2 matches: sp || sp
+
+-ff *si tienen NM pero solo tienen forma farma se debe matchear por precio unitario pero la precisión debe ser más alta ->79
+#alunbrig (brigatinib) tableta 55
+1 coincidencias en 8 matches: sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp || sc|suc|sp
+
+#lynparza (olaparib) (f f tableta) 13
+1 coincidencias en 2 matches: sc|suc|sp || sc|suc|sp
+
+#iclusig (ponatinib)(tableta) 8
+1 coincidencias en 1 matches: sc|suc|sp
+
+#ct-p16 o avastin aprobado en la eu (bevacizumab) 25mg/ml (medicamento)3
+1 coincidencias en 2 matches: cc|sp|sff || cc|sp|sff
+----------------------------------------------------------------------------------------------------
+
+->agregar a nueva presentación -> 49  ó 49 + 21 = 70
+
+#medicamento sutent 28 (sunitinib) caja de carton con 28 capsulas de 50 mg en frasco etiquetado e instructivo anexo.
+2 coincidencias en 1 matches: cc|ff 33  
+
+#acp-196 calquence 100 mg  30 capsulas (acalabrutinib)
+2 coincidencias en 1 matches: pp|ff 8
+
+#verzenio (abemaciclib) 200 mg 28 tab
+2 coincidencias en 3 matches: cc|pp || cc|pp || cc|pp 5
+
+#medicamento inlyta (axitinib) frasco con 60 tabletas de 1 mg
+3 coincidencias en 2 matches: pp || cc  1
+
+#medicamentos (polivy (polatuzumab) caja con 1 vial de 140mg
+2 coincidencias en 2 matches: cc|ff || cc|ff 2
+
+
+-> agregar a regex ->29
+
+#braftovi (encorafenib) braftovi 50mg 28ge
+2 coincidencias en 2 matches: sp|sff || sp|sff 8
+
+
+#ninlaro (ixazomib) caja colectiva con 3 cajas con una capsula de 3.5 mg (medicamento de uso humano) 21
+
+----------------
+281+70+29 = 380
+----------------
+876+380
+1256 + 120 = 1376
